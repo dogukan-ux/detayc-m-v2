@@ -1,0 +1,11 @@
+DETAYCIM V3 PREMIUM DEMO
+- 59 doğrulanmış çekirdek ürün
+- Premium responsive tasarım
+- Arama / kategori / marka / fiyat sıralama
+- Sepet demosu
+- Kurumsal / Üyelik / Sipariş / Teslimat & İade / Hizmet & Destek mimarisi
+- E-bülten alanı
+- Bizim Hesap, kg bazlı kargo, WhatsApp ve ödeme için entegrasyon sunumu
+- Sahte/AI ürün fotoğrafı yoktur.
+- Gönderilen ekranlardan kesin eşleştirilebilen gerçek ürün görselleri eklenmiştir.
+- Canlı mağazada gönderilen ekranda 151 ürün görülmektedir; tam katalog aktarımı için ürün verisi/API veya temiz kaynak görseller gerekir.
