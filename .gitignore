@@ -1,0 +1,13 @@
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+
+# Node dependencies and test output
+node_modules/
+coverage/
+
+# Local tooling and OS files
+.vscode/
+.DS_Store
+Thumbs.db
