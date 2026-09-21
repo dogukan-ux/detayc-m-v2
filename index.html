@@ -94,6 +94,41 @@ header{background:rgba(250,250,249,.88);border-bottom-color:rgba(20,24,30,.09);b
 @media(max-width:850px){.roleLayout{grid-template-columns:1fr}.roleNav{position:static;display:flex;overflow:auto;white-space:nowrap}.roleNav button{width:auto}.dashGrid{grid-template-columns:1fr 1fr}.manageGrid{grid-template-columns:1fr}.adminTable{display:block;overflow-x:auto}}
 @media(max-width:520px){.dashGrid{grid-template-columns:1fr}.roleTop .roleTitle{font-size:13px}.roleTop .logo{font-size:22px}.manageActions .btn{width:100%}}
 
+/* V2.1 — panel/header layout hotfix */
+.roleNav{display:grid!important;grid-auto-flow:row;gap:4px;flex:none!important;overflow:visible!important;white-space:normal!important}
+.roleNav button{display:block!important;min-width:0}
+.roleContent{position:relative;z-index:1}
+.roleContent>section>h2{margin:0 0 14px;line-height:1.15}
+.roleTop .wrap{flex-wrap:nowrap}
+.roleTop .roleClose{flex:0 0 auto;white-space:nowrap}
+@media(max-width:1100px){
+  header .market{display:none}
+  header .navActions{margin-left:auto;display:flex;flex-wrap:nowrap;min-width:0}
+  header .adminEntry{white-space:nowrap}
+}
+@media(max-width:850px){
+  .roleLayout{display:block;padding-top:14px}
+  .roleNav{position:static!important;display:flex!important;flex-wrap:wrap!important;gap:7px!important;margin-bottom:18px}
+  .roleNav button{width:auto!important;border:1px solid var(--line)!important;background:#fff!important}
+  .roleNav button.active{background:#fff1f1!important}
+  .roleTop .wrap{gap:8px}
+  .roleTop .logo{font-size:22px}
+  .roleTop .roleTitle{font-size:14px}
+  .demoRibbon{display:none}
+}
+@media(max-width:700px){
+  header .iconBtn[onclick="focusSearch()"],header .wishlistBtn{display:none!important}
+  header .adminEntry{padding:9px 10px;font-size:12px}
+  header .accountBtn{font-size:12px;padding:9px 10px}
+  header .iconBtn[onclick="openCart()"]{font-size:12px;padding:9px 10px;display:inline-flex!important}
+}
+@media(max-width:520px){
+  .roleTop .logo{font-size:19px}.roleTop .roleTitle{font-size:12px}.roleTop .roleClose{padding:8px 9px;font-size:11px}
+  .roleNav{display:grid!important;grid-template-columns:1fr 1fr!important}
+  .roleNav button{width:100%!important;text-align:center!important}
+}
+
+
 </style>
 </head>
 <body>
@@ -202,7 +237,7 @@ header{background:rgba(250,250,249,.88);border-bottom-color:rgba(20,24,30,.09);b
   <div class="wrap roleLayout">
     <nav class="roleNav" aria-label="Müşteri hesabı menüsü"><button class="active" data-customer-pane="overview">Genel Bakış</button><button data-customer-pane="profile">Profilim</button><button data-customer-pane="addresses">Adreslerim</button><button data-customer-pane="orders">Siparişlerim</button><button data-customer-pane="tracking">Sipariş Takibi</button><button data-customer-pane="favorites">Favorilerim</button></nav>
     <div class="roleContent">
-      <section class="rolePane active" data-customer-content="overview"><h2>Hesabım</h2><div class="customerEmpty">Gerçek üyelik sistemi backend bağlantısı sonrası aktif olacaktır. Bu panel müşteri deneyimi demosudur; parola saklanmaz.</div></section>
+      <section class="rolePane active" data-customer-content="overview"><div class="customerEmpty">Gerçek üyelik sistemi backend bağlantısı sonrası aktif olacaktır. Bu panel müşteri deneyimi demosudur; parola saklanmaz.</div></section>
       <section class="rolePane" data-customer-content="profile"><h2>Profilim</h2><div class="manageCard"><div class="manageGrid"><div class="manageField"><label>Ad</label><input disabled placeholder="Backend bağlantısı gerekli"></div><div class="manageField"><label>Soyad</label><input disabled placeholder="Backend bağlantısı gerekli"></div><div class="manageField"><label>E-posta</label><input disabled placeholder="Backend bağlantısı gerekli"></div><div class="manageField"><label>Telefon</label><input disabled placeholder="Backend bağlantısı gerekli"></div></div></div></section>
       <section class="rolePane" data-customer-content="addresses"><h2>Adreslerim</h2><div class="customerEmpty">Henüz kayıtlı adres bulunmuyor. Gerçek adres yönetimi güvenli müşteri hesabı ile aktif olacaktır.</div></section>
       <section class="rolePane" data-customer-content="orders"><h2>Siparişlerim</h2><div class="customerEmpty">Henüz sipariş bulunmuyor.</div></section>
