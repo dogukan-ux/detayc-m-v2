@@ -158,7 +158,7 @@ header .cartEntry{min-width:118px}
   header .market{display:none!important}
 }
 @media(max-width:900px){header .navActions{gap:5px}header .cartEntry{min-width:auto}}
-.adminViewSwitch{border:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;border-radius:9px;padding:9px 11px;font-weight:800;cursor:pointer;margin-left:auto}
+.adminViewSwitch,.adminReturn{border:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;border-radius:9px;padding:9px 11px;font-weight:800;cursor:pointer;margin-left:auto}.adminReturn{display:none}.roleShell.adminPreview .adminReturn{display:inline-flex}.roleShell.adminPreview .roleClose{margin-left:0}
 
 
 /* V2.4 — dış kanal erişimleri kalıcı görünürlük düzeltmesi */
@@ -280,7 +280,7 @@ header .market a{display:grid!important;flex:0 0 auto}
 </div>
 
 <div class="roleShell" id="customerShell" aria-hidden="true">
-  <div class="roleTop"><div class="wrap"><div class="logo">DETAY<i>CIM</i></div><div class="roleTitle">Müşteri Paneli</div><button class="roleClose" type="button" onclick="closeCustomerPanel()">← Mağazaya Dön</button></div></div>
+  <div class="roleTop"><div class="wrap"><div class="logo">DETAY<i>CIM</i></div><div class="roleTitle">Müşteri Paneli</div><button class="adminReturn" id="adminReturnBtn" type="button" onclick="returnToAdminFromCustomer()">← Yönetim Paneline Dön</button><button class="roleClose" type="button" onclick="closeCustomerPanel()">← Mağazaya Dön</button></div></div>
   <div class="wrap roleLayout">
     <nav class="roleNav" aria-label="Müşteri hesabı menüsü"><button class="active" data-customer-pane="overview">Genel Bakış</button><button data-customer-pane="profile">Profilim</button><button data-customer-pane="addresses">Adreslerim</button><button data-customer-pane="orders">Siparişlerim</button><button data-customer-pane="tracking">Sipariş Takibi</button><button data-customer-pane="favorites">Favorilerim</button></nav>
     <div class="roleContent">
@@ -555,10 +555,24 @@ function setDemoRole(role){
  document.body.dataset.role=safe;
  if(safe==='admin')closeCustomerPanel(); else closeAdminPanel();
 }
-function previewCustomerRole(){setDemoRole('customer');closeAdminPanel();window.scrollTo({top:0,behavior:'smooth'});}
+function previewCustomerRole(){
+ document.body.dataset.role='customer';
+ closeAdminPanel();
+ const shell=document.getElementById('customerShell');
+ shell.classList.add('adminPreview');
+ openCustomerPanel();
+}
+function returnToAdminFromCustomer(){
+ const shell=document.getElementById('customerShell');
+ shell.classList.remove('adminPreview');
+ closeCustomerPanel();
+ setDemoRole('admin');
+ openAdminPanel();
+}
+
 function openAdminPanel(){document.getElementById('adminShell').classList.add('open');document.getElementById('adminShell').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';refreshAdminDashboard();loadProfessionalAdminProduct()}
 function closeAdminPanel(){document.getElementById('adminShell').classList.remove('open');document.getElementById('adminShell').setAttribute('aria-hidden','true');document.body.style.overflow=''}
-function openCustomerPanel(){document.getElementById('customerShell').classList.add('open');document.getElementById('customerShell').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderCustomerFavorites()}
+function openCustomerPanel(){const shell=document.getElementById('customerShell');shell.classList.add('open');shell.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderCustomerFavorites()}
 function closeCustomerPanel(){document.getElementById('customerShell').classList.remove('open');document.getElementById('customerShell').setAttribute('aria-hidden','true');document.body.style.overflow=''}
 function switchRolePane(kind,name){
  const shell=document.getElementById(kind==='admin'?'adminShell':'customerShell');
