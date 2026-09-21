@@ -141,9 +141,28 @@ header .cartEntry{background:var(--red);color:#fff;border-color:var(--red)}
 @media(max-width:900px){header .accountBtn,header .adminEntry,header .cartEntry{font-size:11px;padding:9px 9px}.roleTop .wrap{padding-left:14px;padding-right:14px}}
 @media(max-width:650px){header .accountBtn{font-size:0!important}header .accountBtn:after{content:'Hesabım';font-size:11px}header .adminEntry{font-size:0!important}header .adminEntry:after{content:'Yönetim';font-size:11px}header .cartEntry{font-size:0!important}header .cartEntry:after{content:'Sepet';font-size:11px}.roleTop .roleTitle{display:none}}
 
+
+/* V2.3 — rol bazlı mağaza kabuğu ve taşmayan ana navigasyon */
+body[data-role="admin"] header .accountBtn{display:none!important}
+body[data-role="customer"] header .adminEntry{display:none!important}
+body[data-role="admin"] header .adminEntry,body[data-role="customer"] header .accountBtn,header .cartEntry{display:inline-flex!important}
+header .nav{max-width:1600px}
+header .navActions{margin-left:auto;flex:0 0 auto;overflow:visible}
+header .cartEntry{min-width:118px}
+@media(max-width:1500px){
+  header .mobileMenuBtn{display:block!important;order:2}
+  header .nav{flex-wrap:wrap}
+  header .nav nav{display:none!important;order:5;flex-basis:100%;padding:10px 0 12px;gap:13px;flex-direction:column}
+  header .nav nav.mobileOpen{display:flex!important}
+  header .navActions{order:3;margin-left:auto}
+  header .market{display:none!important}
+}
+@media(max-width:900px){header .navActions{gap:5px}header .cartEntry{min-width:auto}}
+.adminViewSwitch{border:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;border-radius:9px;padding:9px 11px;font-weight:800;cursor:pointer;margin-left:auto}
+
 </style>
 </head>
-<body>
+<body data-role="admin">
 <div class="top"><div class="wrap"><span>Profesyonel detailing ürünleri • Türkiye geneli</span><span>Demo V2 • Satış sunumu prototipi</span></div></div>
 <header><div class="wrap nav"><a class="logo" href="#" aria-label="Detaycım ana sayfa">DETAY<i>CIM</i></a><button class="mobileMenuBtn" type="button" aria-label="Menüyü aç" aria-expanded="false" onclick="toggleMobileMenu()">☰</button><nav aria-label="Ana navigasyon" id="mainNav"><a href="#urunler">Ürünler</a><a href="#vitrin">Kategoriler</a><a href="#markalar">Markalar</a><a href="#kampanyalar">Kampanyalar</a><a href="#cok-satanlar">Çok Satanlar</a><a href="#yeni-gelenler">Yeni Gelenler</a><a href="#neden">Kurumsal</a><a href="#destek">Destek</a></nav><div class="navActions"><div class="market" aria-label="Detaycım dış kanalları"><a class="ty" title="Trendyol" target="_blank" rel="noopener" href="https://www.trendyol.com/magaza/detaycim-m-185382">TY</a><a class="hb" title="Hepsiburada" target="_blank" rel="noopener" href="https://www.hepsiburada.com/magaza/detaycim">HB</a><a class="ig" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/detaycim.comtr/">IG</a><a class="wa" title="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/905309310122">WA</a></div><button class="iconBtn" type="button" onclick="focusSearch()">⌕ Ara</button><button class="iconBtn wishlistBtn" type="button" aria-label="Favoriler" onclick="scrollToWishlist()">♡ <span id="wishlistCount">0</span></button><button class="iconBtn accountBtn" type="button" aria-label="Müşteri paneli" onclick="openCustomerPanel()">◉ Müşteri Paneli</button><button class="adminEntry" type="button" onclick="openAdminPanel()" title="Demo yönetim paneli">⚙ Yönetim Paneli</button><button class="iconBtn cartEntry" type="button" onclick="openCart()">🛒 Sepetim · <span id="cartCount">0</span></button></div></div></header>
 
@@ -201,7 +220,7 @@ header .cartEntry{background:var(--red);color:#fff;border-color:var(--red)}
 
 
 <div class="roleShell" id="adminShell" aria-hidden="true">
-  <div class="roleTop"><div class="wrap"><div class="logo">DETAY<i>CIM</i></div><div class="roleTitle">Yönetim Paneli</div><span class="demoRibbon">DEMO • Tarayıcıda saklanır</span><button class="roleClose" type="button" onclick="closeAdminPanel()">← Mağazaya Dön</button></div></div>
+  <div class="roleTop"><div class="wrap"><div class="logo">DETAY<i>CIM</i></div><div class="roleTitle">Yönetim Paneli</div><span class="demoRibbon">DEMO • Tarayıcıda saklanır</span><button class="adminViewSwitch" type="button" onclick="previewCustomerRole()">Müşteri Görünümünü Test Et</button><button class="roleClose" type="button" onclick="closeAdminPanel()">← Mağazaya Dön</button></div></div>
   <div class="wrap roleLayout">
     <nav class="roleNav" aria-label="Yönetim menüsü">
       <button class="active" data-admin-pane="dashboard">Dashboard</button>
@@ -517,6 +536,12 @@ document.getElementById('detailModal').addEventListener('keydown',trapDetailFocu
 document.addEventListener('click',event=>{if(!event.target.closest('.searchWrap'))document.getElementById('searchSuggestions').classList.remove('open')});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(activeProduct)closeProductDetail();else if(document.getElementById('accountBackdrop').classList.contains('open'))closeAccount();else closeCart()}});
 
+function setDemoRole(role){
+ const safe=role==='customer'?'customer':'admin';
+ document.body.dataset.role=safe;
+ if(safe==='admin')closeCustomerPanel(); else closeAdminPanel();
+}
+function previewCustomerRole(){setDemoRole('customer');closeAdminPanel();window.scrollTo({top:0,behavior:'smooth'});}
 function openAdminPanel(){document.getElementById('adminShell').classList.add('open');document.getElementById('adminShell').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';refreshAdminDashboard();loadProfessionalAdminProduct()}
 function closeAdminPanel(){document.getElementById('adminShell').classList.remove('open');document.getElementById('adminShell').setAttribute('aria-hidden','true');document.body.style.overflow=''}
 function openCustomerPanel(){document.getElementById('customerShell').classList.add('open');document.getElementById('customerShell').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderCustomerFavorites()}
