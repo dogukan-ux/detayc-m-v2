@@ -160,6 +160,20 @@ header .cartEntry{min-width:118px}
 @media(max-width:900px){header .navActions{gap:5px}header .cartEntry{min-width:auto}}
 .adminViewSwitch{border:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;border-radius:9px;padding:9px 11px;font-weight:800;cursor:pointer;margin-left:auto}
 
+
+/* V2.4 — dış kanal erişimleri kalıcı görünürlük düzeltmesi */
+header .market{display:flex!important;align-items:center;gap:5px;flex:0 0 auto!important;padding-right:10px;border-right:1px solid #d7dade}
+header .market a{display:grid!important;flex:0 0 auto}
+@media(max-width:1500px){
+  header .market{display:flex!important}
+  header .iconBtn[onclick="focusSearch()"],header .wishlistBtn{display:none!important}
+}
+@media(max-width:760px){
+  header .navActions{flex-wrap:wrap!important;justify-content:flex-end}
+  header .market{order:1;width:100%;justify-content:flex-end;padding-right:0;border-right:0;margin-bottom:2px}
+  header .adminEntry,header .accountBtn,header .cartEntry{order:2}
+}
+@media(max-width:420px){header .market a{width:27px;height:27px;font-size:8px}}
 </style>
 </head>
 <body data-role="admin">
