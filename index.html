@@ -75,11 +75,30 @@ header{background:rgba(250,250,249,.88);border-bottom-color:rgba(20,24,30,.09);b
 @media (min-width:901px) and (max-width:1100px){.mobileMenuBtn{display:block;order:2}.nav{flex-wrap:wrap}.nav nav{display:none;order:5;flex-basis:100%;padding:8px 0 12px;gap:13px;flex-direction:column}.nav nav.mobileOpen{display:flex}.navActions{margin-left:auto;order:3}}
 @media(max-width:560px){.filterMeta{align-items:flex-start;flex-wrap:wrap}.filterMeta #activeFilters{order:3;flex-basis:100%}.brandPill{padding:12px 14px}.adminControls{grid-template-columns:1fr}.adminControls .btn{grid-column:auto}.showcaseSplit{gap:28px}.compactGrid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.accountBtn{font-size:0;padding:10px 11px}.accountBtn:first-letter{font-size:15px}.backTop{bottom:16px;right:14px}}
+
+/* Detaycım V2 — Yönetici + Müşteri + Ticaret tamamlama katmanı */
+.roleShell{position:fixed;inset:0;z-index:150;background:#f4f5f6;display:none;overflow:auto}
+.roleShell.open{display:block}.roleTop{position:sticky;top:0;z-index:3;background:#111318;color:#fff;border-bottom:1px solid #2b2e34}
+.roleTop .wrap{min-height:68px;display:flex;align-items:center;gap:14px}.roleTop .logo{color:#fff}.roleTop .roleTitle{font-weight:900}.roleTop .roleClose{margin-left:auto;border:1px solid #3a3e45;background:#1d2026;color:#fff;border-radius:10px;padding:10px 14px}
+.roleLayout{display:grid;grid-template-columns:240px 1fr;gap:18px;padding-top:20px;padding-bottom:50px}.roleNav{background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px;height:max-content;position:sticky;top:88px}
+.roleNav button{width:100%;text-align:left;border:0;background:transparent;border-radius:10px;padding:12px 13px;font-weight:800;color:#4c535d}.roleNav button.active,.roleNav button:hover{background:#fff1f1;color:var(--red)}
+.roleContent{min-width:0}.rolePane{display:none}.rolePane.active{display:block}.dashGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.statCard,.manageCard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.statCard small{color:var(--muted);font-weight:800}.statCard strong{display:block;font-size:27px;margin-top:7px}.manageCard{margin-top:14px}.manageCard h3{margin-top:0}
+.manageGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.manageField{display:grid;gap:6px}.manageField label{font-size:12px;font-weight:850}.manageField input,.manageField select,.manageField textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px;background:#fff}.manageField textarea{min-height:90px;resize:vertical}
+.manageActions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.dangerBtn{background:#fff;color:var(--red);border:1px solid #efb8bb}.secondaryBtn{background:#eef0f2;color:#111318}
+.adminPreview{margin-top:14px;padding:14px;border-radius:12px;background:#f7f8f9;border:1px solid var(--line);line-height:1.7}.statusMsg{min-height:22px;margin-top:10px;font-size:12px;color:var(--muted)}
+.customerEmpty{padding:26px;border:1px dashed #cbd0d5;border-radius:14px;background:#fff;color:var(--muted)}.customerList{display:grid;gap:10px}.customerFavorite{display:flex;justify-content:space-between;gap:12px;padding:13px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.adminTable{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}.adminTable th,.adminTable td{padding:11px 12px;border-bottom:1px solid var(--line);font-size:12px;text-align:left}.adminTable th{background:#f4f5f6}.adminTable button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 9px}
+.demoRibbon{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:#fff4d8;color:#7b5900;padding:7px 10px;font-size:11px;font-weight:900}
+.adminEntry{border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 12px;font-weight:800}
+@media(max-width:850px){.roleLayout{grid-template-columns:1fr}.roleNav{position:static;display:flex;overflow:auto;white-space:nowrap}.roleNav button{width:auto}.dashGrid{grid-template-columns:1fr 1fr}.manageGrid{grid-template-columns:1fr}.adminTable{display:block;overflow-x:auto}}
+@media(max-width:520px){.dashGrid{grid-template-columns:1fr}.roleTop .roleTitle{font-size:13px}.roleTop .logo{font-size:22px}.manageActions .btn{width:100%}}
+
 </style>
 </head>
 <body>
 <div class="top"><div class="wrap"><span>Profesyonel detailing ürünleri • Türkiye geneli</span><span>Demo V2 • Satış sunumu prototipi</span></div></div>
-<header><div class="wrap nav"><a class="logo" href="#" aria-label="Detaycım ana sayfa">DETAY<i>CIM</i></a><button class="mobileMenuBtn" type="button" aria-label="Menüyü aç" aria-expanded="false" onclick="toggleMobileMenu()">☰</button><nav aria-label="Ana navigasyon" id="mainNav"><a href="#urunler">Ürünler</a><a href="#vitrin">Kategoriler</a><a href="#markalar">Markalar</a><a href="#vitrin">Kampanyalar</a><a href="#vitrin">Çok Satanlar</a><a href="#vitrin">Yeni Gelenler</a><a href="#neden">Kurumsal</a><a href="#destek">Destek</a></nav><div class="navActions"><div class="market" aria-label="Detaycım dış kanalları"><a class="ty" title="Trendyol" target="_blank" rel="noopener" href="https://www.trendyol.com/magaza/detaycim-m-185382">TY</a><a class="hb" title="Hepsiburada" target="_blank" rel="noopener" href="https://www.hepsiburada.com/magaza/detaycim">HB</a><a class="ig" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/detaycim.comtr/">IG</a><a class="wa" title="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/905309310122">WA</a></div><button class="iconBtn" type="button" onclick="focusSearch()">⌕ Ara</button><button class="iconBtn wishlistBtn" type="button" aria-label="Favoriler" onclick="scrollToWishlist()">♡ <span id="wishlistCount">0</span></button><button class="iconBtn accountBtn" type="button" aria-label="Hesabım" onclick="openAccount()">◉ Hesabım</button><button class="iconBtn" type="button" onclick="openCart()">Sepet · <span id="cartCount">0</span></button></div></div></header>
+<header><div class="wrap nav"><a class="logo" href="#" aria-label="Detaycım ana sayfa">DETAY<i>CIM</i></a><button class="mobileMenuBtn" type="button" aria-label="Menüyü aç" aria-expanded="false" onclick="toggleMobileMenu()">☰</button><nav aria-label="Ana navigasyon" id="mainNav"><a href="#urunler">Ürünler</a><a href="#vitrin">Kategoriler</a><a href="#markalar">Markalar</a><a href="#kampanyalar">Kampanyalar</a><a href="#cok-satanlar">Çok Satanlar</a><a href="#yeni-gelenler">Yeni Gelenler</a><a href="#neden">Kurumsal</a><a href="#destek">Destek</a></nav><div class="navActions"><div class="market" aria-label="Detaycım dış kanalları"><a class="ty" title="Trendyol" target="_blank" rel="noopener" href="https://www.trendyol.com/magaza/detaycim-m-185382">TY</a><a class="hb" title="Hepsiburada" target="_blank" rel="noopener" href="https://www.hepsiburada.com/magaza/detaycim">HB</a><a class="ig" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/detaycim.comtr/">IG</a><a class="wa" title="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/905309310122">WA</a></div><button class="iconBtn" type="button" onclick="focusSearch()">⌕ Ara</button><button class="iconBtn wishlistBtn" type="button" aria-label="Favoriler" onclick="scrollToWishlist()">♡ <span id="wishlistCount">0</span></button><button class="iconBtn accountBtn" type="button" aria-label="Hesabım" onclick="openCustomerPanel()">◉ Hesabım</button><button class="adminEntry" type="button" onclick="openAdminPanel()" title="Demo yönetim paneli">Yönetim</button><button class="iconBtn" type="button" onclick="openCart()">Sepet · <span id="cartCount">0</span></button></div></div></header>
 
 <main>
 <section class="hero"><div class="wrap"><div class="heroBox">
@@ -99,8 +118,8 @@ header{background:rgba(250,250,249,.88);border-bottom-color:rgba(20,24,30,.09);b
 <section class="showcase section" id="vitrin"><div class="wrap">
 <div class="sectionTop"><div><div class="kicker">DETAYCIM SEÇKİSİ</div><h2>Vitrin Ürünleri</h2></div><p>İşletme seçimi bekleniyor.</p></div>
 <div class="showcaseGrid" id="featuredShowcase"></div>
-<div class="showcaseSplit"><div><div class="sectionTop compact"><div><div class="kicker">KATALOG</div><h3>Son Eklenenler</h3></div></div><div class="showcaseGrid compactGrid" id="latestShowcase"></div></div><div><div class="sectionTop compact"><div><div class="kicker">KATEGORİLER</div><h3>Popüler Gruplar</h3></div></div><div class="groupGrid" id="categoryShowcase"></div></div></div>
-<div class="showcaseSplit"><div><div class="sectionTop compact"><div><div class="kicker">SATIŞ METRİĞİ</div><h3>Çok Satanlar</h3></div></div><div class="showcaseGrid compactGrid" id="bestsellerShowcase"></div></div><div><div class="sectionTop compact"><div><div class="kicker">KAMPANYALAR</div><h3>İndirimdekiler</h3></div></div><div class="showcaseGrid compactGrid" id="discountShowcase"></div></div></div>
+<div class="showcaseSplit"><div id="yeni-gelenler"><div class="sectionTop compact"><div><div class="kicker">KATALOG</div><h3>Son Eklenenler</h3></div></div><div class="showcaseGrid compactGrid" id="latestShowcase"></div></div><div><div class="sectionTop compact"><div><div class="kicker">KATEGORİLER</div><h3>Popüler Gruplar</h3></div></div><div class="groupGrid" id="categoryShowcase"></div></div></div>
+<div class="showcaseSplit"><div id="cok-satanlar"><div class="sectionTop compact"><div><div class="kicker">SATIŞ METRİĞİ</div><h3>Çok Satanlar</h3></div></div><div class="showcaseGrid compactGrid" id="bestsellerShowcase"></div></div><div id="kampanyalar"><div class="sectionTop compact"><div><div class="kicker">KAMPANYALAR</div><h3>İndirimdekiler</h3></div></div><div class="showcaseGrid compactGrid" id="discountShowcase"></div></div></div>
 <div class="showcaseSplit"><div id="recentSection"><div class="sectionTop compact"><div><div class="kicker">KİŞİSEL ALAN</div><h3>Son Görüntülenenler</h3></div></div><div class="showcaseGrid compactGrid" id="recentShowcase"></div></div><div id="recommendedSection"><div class="sectionTop compact"><div><div class="kicker">DEMO ÖNERİSİ</div><h3>Sana Önerilenler</h3></div></div><div class="showcaseGrid compactGrid" id="recommendedShowcase"></div></div></div>
 <div id="wishlistSection"><div class="sectionTop compact"><div><div class="kicker">KAYDEDİLENLER</div><h3>Favorilerim</h3></div></div><div class="showcaseGrid compactGrid" id="wishlistShowcase"></div></div>
 </div></section>
@@ -131,8 +150,67 @@ header{background:rgba(250,250,249,.88);border-bottom-color:rgba(20,24,30,.09);b
 <div class="box"><h3>Sipariş özeti</h3><div class="summaryLine"><span>Ürünler</span><span id="sumProduct">0 TL</span></div><div class="summaryLine"><span>Kargo</span><span>Kg kuralına göre</span></div><div class="summaryLine total"><span>Toplam</span><span id="sumTotal">0 TL</span></div><button class="btn primary" style="width:100%;margin-top:16px">Siparişi Tamamla — Demo</button></div></div>
 </div></section>
 
-<section class="section adminDemo" id="admin-demo"><div class="wrap"><div class="sectionTop"><div><div class="kicker">YÖNETİM HAZIRLIĞI</div><h2>Demo Store Manager</h2></div><p>Gerçek sunucuya kaydedilmez.</p></div><div class="adminPanel"><p><strong>Demo yönetim paneli — gerçek sunucuya kaydedilmez.</strong> Production sürümünde authenticated admin + database ile değiştirilmelidir.</p><div class="adminControls"><input id="adminSearch" class="search" type="search" placeholder="Ürün ara…" aria-label="Demo ürün ara"><select id="adminProduct" class="select" aria-label="Demo ürün seç"></select><select id="adminDiscount" class="select" aria-label="Demo indirim seç"><option value="">İndirim yok</option><option value="5">%5</option><option value="10">%10</option><option value="15">%15</option><option value="20">%20</option><option value="25">%25</option><option value="50">%50</option><option value="80">%80</option><option value="100">%100 — ikinci onay gerekir</option></select><label class="adminCheck"><input id="adminFeatured" type="checkbox"> Demo vitrinde göster</label><label class="adminCheck"><input id="adminNew" type="checkbox"> Demo yeni gelen</label><label class="adminCheck"><input id="adminBest" type="checkbox"> Demo çok satan grubu</label><button class="btn primary" type="button" onclick="saveAdminDemo()">Demo ayarını kaydet</button></div><div id="adminStatus" class="demoNote"></div></div></div></section>
 </main>
+
+
+<div class="roleShell" id="adminShell" aria-hidden="true">
+  <div class="roleTop"><div class="wrap"><div class="logo">DETAY<i>CIM</i></div><div class="roleTitle">Yönetim Paneli</div><span class="demoRibbon">DEMO • Tarayıcıda saklanır</span><button class="roleClose" type="button" onclick="closeAdminPanel()">Mağazaya dön ×</button></div></div>
+  <div class="wrap roleLayout">
+    <nav class="roleNav" aria-label="Yönetim menüsü">
+      <button class="active" data-admin-pane="dashboard">Dashboard</button>
+      <button data-admin-pane="products">Ürünler</button>
+      <button data-admin-pane="discounts">İndirimler</button>
+      <button data-admin-pane="campaigns">Kampanyalar</button>
+      <button data-admin-pane="orders">Siparişler</button>
+      <button data-admin-pane="customers">Müşteriler</button>
+      <button data-admin-pane="inventory">Stok</button>
+      <button data-admin-pane="shipping">Kargo</button>
+      <button data-admin-pane="integrations">Entegrasyonlar</button>
+    </nav>
+    <div class="roleContent">
+      <section class="rolePane active" data-admin-content="dashboard">
+        <h2>Detaycım Yönetim Paneli</h2><p class="demoNote">Bu statik demo gerçek yetkilendirme/veritabanı değildir. Production sürümünde admin erişimi sunucu tarafında korunmalıdır.</p>
+        <div class="dashGrid"><div class="statCard"><small>Katalog</small><strong id="adminProductCount">0</strong><span>ürün</span></div><div class="statCard"><small>Aktif demo indirimi</small><strong id="adminDiscountCount">0</strong><span>ürün</span></div><div class="statCard"><small>Canlı sipariş verisi</small><strong>—</strong><span>backend gerekli</span></div></div>
+      </section>
+      <section class="rolePane" data-admin-content="products"><h2>Ürünler</h2><div class="manageCard"><input id="adminTableSearch" class="search" type="search" placeholder="Ürün, marka veya kategori ara…"><div id="adminProductTableWrap" style="margin-top:12px"></div></div></section>
+      <section class="rolePane" data-admin-content="discounts">
+        <h2>İndirim Yönetimi</h2>
+        <div class="manageCard"><div class="manageGrid">
+          <div class="manageField"><label>Ürün</label><select id="proAdminProduct"></select></div>
+          <div class="manageField"><label>İndirim</label><select id="proAdminDiscount"><option value="">İndirim yok</option><option value="5">%5</option><option value="10">%10</option><option value="15">%15</option><option value="20">%20</option><option value="25">%25</option><option value="50">%50</option><option value="80">%80</option><option value="100">%100</option></select></div>
+          <div class="manageField"><label>Kampanya adı</label><input id="proAdminCampaign" placeholder="Örn. Hafta Sonu Kampanyası"></div>
+          <div class="manageField"><label>Başlangıç</label><input id="proAdminStart" type="datetime-local"></div>
+          <div class="manageField"><label>Bitiş</label><input id="proAdminEnd" type="datetime-local"></div>
+          <div class="manageField"><label>Vitrin</label><select id="proAdminFeatured"><option value="false">Hayır</option><option value="true">Evet</option></select></div>
+        </div>
+        <div class="adminPreview" id="adminPricePreview"></div>
+        <div class="manageActions"><button class="btn primary" type="button" onclick="saveProfessionalDiscount()">İndirimi Kaydet</button><button class="btn dangerBtn" type="button" onclick="removeProfessionalDiscount()">İndirimi Kaldır</button><button class="btn secondaryBtn" type="button" onclick="resetProfessionalProduct()">Ürün Demo Ayarlarını Sıfırla</button></div>
+        <div id="professionalAdminStatus" class="statusMsg" aria-live="polite"></div></div>
+      </section>
+      <section class="rolePane" data-admin-content="campaigns"><h2>Kampanyalar</h2><div class="customerEmpty">Kampanya mimarisi hazır. Gerçek kampanyalar işletme kararıyla oluşturulmalıdır; sistem sahte kampanya üretmez. Ürün bazlı kampanyalar İndirimler bölümünden tarihli olarak yönetilebilir.</div></section>
+      <section class="rolePane" data-admin-content="orders"><h2>Siparişler</h2><div class="customerEmpty">Canlı sipariş verisi backend ve ödeme altyapısı bağlandıktan sonra burada görüntülenecek.</div></section>
+      <section class="rolePane" data-admin-content="customers"><h2>Müşteriler</h2><div class="customerEmpty">Canlı müşteri verisi güvenli üyelik/backend bağlantısı sonrası görüntülenecek.</div></section>
+      <section class="rolePane" data-admin-content="inventory"><h2>Stok</h2><div class="customerEmpty">Gerçek stok miktarları işletme verisi ve stok entegrasyonu olmadan tahmin edilmez.</div></section>
+      <section class="rolePane" data-admin-content="shipping"><h2>Kargo</h2><div class="customerEmpty">Kg bazlı hesaplama için ürün ağırlıkları ve işletmenin kargo tarifesi gereklidir.</div></section>
+      <section class="rolePane" data-admin-content="integrations"><h2>Entegrasyonlar</h2><div class="manageCard"><div class="row"><span>Ödeme sağlayıcısı</span><span class="pending">Bağlı değil</span></div><div class="row"><span>Bizim Hesap</span><span class="pending">Bağlı değil</span></div><div class="row"><span>Kargo API</span><span class="pending">Bağlı değil</span></div><div class="row"><span>WhatsApp Business Cloud API</span><span class="pending">Bağlı değil</span></div><div class="row"><span>Auth + Database</span><span class="pending">Bağlı değil</span></div></div></section>
+    </div>
+  </div>
+</div>
+
+<div class="roleShell" id="customerShell" aria-hidden="true">
+  <div class="roleTop"><div class="wrap"><div class="logo">DETAY<i>CIM</i></div><div class="roleTitle">Müşteri Paneli</div><button class="roleClose" type="button" onclick="closeCustomerPanel()">Mağazaya dön ×</button></div></div>
+  <div class="wrap roleLayout">
+    <nav class="roleNav" aria-label="Müşteri hesabı menüsü"><button class="active" data-customer-pane="overview">Genel Bakış</button><button data-customer-pane="profile">Profilim</button><button data-customer-pane="addresses">Adreslerim</button><button data-customer-pane="orders">Siparişlerim</button><button data-customer-pane="tracking">Sipariş Takibi</button><button data-customer-pane="favorites">Favorilerim</button></nav>
+    <div class="roleContent">
+      <section class="rolePane active" data-customer-content="overview"><h2>Hesabım</h2><div class="customerEmpty">Gerçek üyelik sistemi backend bağlantısı sonrası aktif olacaktır. Bu panel müşteri deneyimi demosudur; parola saklanmaz.</div></section>
+      <section class="rolePane" data-customer-content="profile"><h2>Profilim</h2><div class="manageCard"><div class="manageGrid"><div class="manageField"><label>Ad</label><input disabled placeholder="Backend bağlantısı gerekli"></div><div class="manageField"><label>Soyad</label><input disabled placeholder="Backend bağlantısı gerekli"></div><div class="manageField"><label>E-posta</label><input disabled placeholder="Backend bağlantısı gerekli"></div><div class="manageField"><label>Telefon</label><input disabled placeholder="Backend bağlantısı gerekli"></div></div></div></section>
+      <section class="rolePane" data-customer-content="addresses"><h2>Adreslerim</h2><div class="customerEmpty">Henüz kayıtlı adres bulunmuyor. Gerçek adres yönetimi güvenli müşteri hesabı ile aktif olacaktır.</div></section>
+      <section class="rolePane" data-customer-content="orders"><h2>Siparişlerim</h2><div class="customerEmpty">Henüz sipariş bulunmuyor.</div></section>
+      <section class="rolePane" data-customer-content="tracking"><h2>Sipariş Takibi</h2><div class="customerEmpty">Takip edilecek gerçek sipariş bulunmuyor.</div></section>
+      <section class="rolePane" data-customer-content="favorites"><h2>Favorilerim</h2><div id="customerFavorites" class="customerList"></div></section>
+    </div>
+  </div>
+</div>
 
 <footer id="destek"><div class="wrap footerGrid"><div><div class="logo">DETAY<i>CIM</i></div><p>Premium otomotiv bakım e‑ticaret deneyimi. Detaycım V2 satış sunumu prototipi.</p></div><div><strong>Mağaza</strong><div><a href="#urunler">Tüm ürünler</a></div><div><a href="#neden">Neden Detaycım?</a></div><div><a href="#checkout">Checkout demo</a></div></div><div><strong>Dış kanallar</strong><div><a target="_blank" rel="noopener" href="https://www.instagram.com/detaycim.comtr/">Instagram</a></div><div><a target="_blank" rel="noopener" href="https://www.trendyol.com/magaza/detaycim-m-185382">Trendyol</a></div><div><a target="_blank" rel="noopener" href="https://www.hepsiburada.com/magaza/detaycim">Hepsiburada</a></div><div><a target="_blank" rel="noopener" href="https://wa.me/905309310122">WhatsApp</a></div></div><div><strong>V2 Altyapı</strong><div>Bizim Hesap</div><div>Kg bazlı kargo</div><div>Mobil panel</div></div></div></footer>
 
@@ -263,7 +341,7 @@ function closeProductDetail(){
 }
 function askProductOnWhatsApp(){
 	if(!activeProduct)return;
-	const message=`Merhaba, ${activeProduct.name} hakkında bilgi almak istiyorum.`;
+	const message=`Merhaba, şu ürün hakkında bilgi almak istiyorum:\n\nMarka: ${activeProduct.brand}\nÜrün: ${activeProduct.name}\nFiyat: ${money(effectivePrice(activeProduct))}`;
 	window.open(`https://wa.me/905309310122?text=${encodeURIComponent(message)}`,'_blank','noopener');
 }
 function setDetailQuantity(value){detailQuantity=Math.max(1,Math.min(99,value));document.getElementById('detailQty').textContent=detailQuantity}
@@ -345,9 +423,9 @@ function render(){
 	const sort=document.getElementById('sortFilter').value;
 	const merch=document.getElementById('merchFilter').value;
 	let visible=products.filter(product=>(activeCategory==='Tümü'||product.category===activeCategory)&&(!brand||product.brand===brand)&&(!query||(product.name+' '+product.brand+' '+product.category).toLocaleLowerCase('tr').includes(query)));
-	if(priceRange){const [min,max]=priceRange.split('-').map(Number);visible=visible.filter(product=>product.price>=min&&product.price<=max)}
+	if(priceRange){const [min,max]=priceRange.split('-').map(Number);visible=visible.filter(product=>effectivePrice(product)>=min&&effectivePrice(product)<=max)}
 	if(merch==='discount')visible=visible.filter(product=>activeDiscount(product));if(merch==='new')visible=visible.filter(product=>product.addedAt);if(merch==='best')visible=visible.filter(product=>product.salesCount!==null&&product.salesCount!==undefined);
-	if(sort==='low')visible.sort((a,b)=>a.price-b.price);if(sort==='high')visible.sort((a,b)=>b.price-a.price);if(sort==='az')visible.sort((a,b)=>a.name.localeCompare(b.name,'tr'));
+	if(sort==='low')visible.sort((a,b)=>effectivePrice(a)-effectivePrice(b));if(sort==='high')visible.sort((a,b)=>effectivePrice(b)-effectivePrice(a));if(sort==='az')visible.sort((a,b)=>a.name.localeCompare(b.name,'tr'));
 	if(sort==='discount')visible.sort((a,b)=>(activeDiscount(b)?.percent||0)-(activeDiscount(a)?.percent||0));if(sort==='new')visible.sort((a,b)=>new Date(b.addedAt||0)-new Date(a.addedAt||0));if(sort==='best')visible.sort((a,b)=>(b.salesCount||0)-(a.salesCount||0));
 	document.getElementById('productGrid').innerHTML=visible.length?visible.map(productCardMarkup).join(''):'<div class="empty">Aramanızla eşleşen ürün bulunamadı.</div>';
 	bindProductCards(document.getElementById('productGrid'));
@@ -363,7 +441,12 @@ function setup(){
 	document.getElementById('brandCloud').innerHTML=[...new Set(products.map(product=>product.brand))].sort().map(brand=>`<button class="brandPill" type="button" data-brand-link="${escapeHTML(brand)}">${escapeHTML(brand)}</button>`).join('');
 	document.querySelectorAll('[data-brand-link]').forEach(button=>button.addEventListener('click',()=>{document.getElementById('brandFilter').value=button.dataset.brandLink;document.getElementById('urunler').scrollIntoView({behavior:'smooth'});render()}));
 	document.querySelectorAll('[data-category-link]').forEach(link=>link.addEventListener('click',()=>{activeCategory=link.dataset.categoryLink;categoryFilter.value=activeCategory;render()}));
-	setupAdminDemo();renderCart();renderShowcase();render();
+	setupAdminDemo();
+	const proSelect=document.getElementById('proAdminProduct');
+	if(proSelect){proSelect.innerHTML=products.map(p=>`<option value="${p.id}">${escapeHTML(p.brand)} · ${escapeHTML(p.name)}</option>`).join('');proSelect.addEventListener('change',loadProfessionalAdminProduct)}
+	const proDiscount=document.getElementById('proAdminDiscount');if(proDiscount)proDiscount.addEventListener('change',updateAdminPricePreview);
+	const tableSearch=document.getElementById('adminTableSearch');if(tableSearch)tableSearch.addEventListener('input',e=>renderAdminProductTable(e.target.value));
+	renderCart();renderShowcase();render();refreshAdminDashboard();loadProfessionalAdminProduct();
 }
 function setupAdminDemo(){const select=document.getElementById('adminProduct');select.innerHTML=products.map(product=>`<option value="${product.id}">${escapeHTML(product.brand)} · ${escapeHTML(product.name)}</option>`).join('');document.getElementById('adminSearch').addEventListener('input',event=>{const value=event.target.value.toLocaleLowerCase('tr');[...select.options].forEach(option=>{option.hidden=value&&!option.textContent.toLocaleLowerCase('tr').includes(value)})});document.getElementById('adminDiscount').addEventListener('change',event=>{if(event.target.value==='100'&&!window.confirm('Bu ürün ücretsiz olacaktır. Devam etmek istediğinizden emin misiniz?'))event.target.value=''})}
 function saveAdminDemo(){const id=Number(document.getElementById('adminProduct').value);const discount=document.getElementById('adminDiscount').value;const overrides=JSON.parse(localStorage.getItem('detaycimDemoCatalog')||'{}');const newDemo=document.getElementById('adminNew').checked;overrides[id]={...overrides[id],featured:document.getElementById('adminFeatured').checked,discountActive:Boolean(discount),discountPercent:discount?Number(discount):null,isNewDemo:newDemo,isBestsellerDemo:document.getElementById('adminBest').checked,addedAt:newDemo?new Date().toISOString():null};localStorage.setItem('detaycimDemoCatalog',JSON.stringify(overrides));const product=getProduct(id);Object.assign(product,overrides[id]);document.getElementById('adminStatus').textContent='Demo ayarı localStorage’a kaydedildi; gerçek sunucuya gönderilmedi.';renderShowcase();render();renderCart()}
@@ -382,6 +465,80 @@ document.getElementById('accountBackdrop').addEventListener('click',event=>{if(e
 document.getElementById('detailModal').addEventListener('keydown',trapDetailFocus);
 document.addEventListener('click',event=>{if(!event.target.closest('.searchWrap'))document.getElementById('searchSuggestions').classList.remove('open')});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(activeProduct)closeProductDetail();else if(document.getElementById('accountBackdrop').classList.contains('open'))closeAccount();else closeCart()}});
+
+function openAdminPanel(){document.getElementById('adminShell').classList.add('open');document.getElementById('adminShell').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';refreshAdminDashboard();loadProfessionalAdminProduct()}
+function closeAdminPanel(){document.getElementById('adminShell').classList.remove('open');document.getElementById('adminShell').setAttribute('aria-hidden','true');document.body.style.overflow=''}
+function openCustomerPanel(){document.getElementById('customerShell').classList.add('open');document.getElementById('customerShell').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderCustomerFavorites()}
+function closeCustomerPanel(){document.getElementById('customerShell').classList.remove('open');document.getElementById('customerShell').setAttribute('aria-hidden','true');document.body.style.overflow=''}
+function switchRolePane(kind,name){
+ const shell=document.getElementById(kind==='admin'?'adminShell':'customerShell');
+ shell.querySelectorAll(`[data-${kind}-pane]`).forEach(btn=>btn.classList.toggle('active',btn.dataset[`${kind}Pane`]===name));
+ shell.querySelectorAll(`[data-${kind}-content]`).forEach(pane=>pane.classList.toggle('active',pane.dataset[`${kind}Content`]===name));
+}
+document.querySelectorAll('[data-admin-pane]').forEach(btn=>btn.addEventListener('click',()=>switchRolePane('admin',btn.dataset.adminPane)));
+document.querySelectorAll('[data-customer-pane]').forEach(btn=>btn.addEventListener('click',()=>{switchRolePane('customer',btn.dataset.customerPane);if(btn.dataset.customerPane==='favorites')renderCustomerFavorites()}));
+
+function safeOverrides(){try{const value=JSON.parse(localStorage.getItem('detaycimDemoCatalog')||'{}');return value&&typeof value==='object'&&!Array.isArray(value)?value:{}}catch(e){return {}}}
+function persistOverride(id,patch){const overrides=safeOverrides();overrides[String(id)]={...(overrides[String(id)]||{}),...patch};localStorage.setItem('detaycimDemoCatalog',JSON.stringify(overrides));const product=getProduct(id);if(product)Object.assign(product,overrides[String(id)]);return product}
+function toLocalInput(iso){if(!iso)return '';const d=new Date(iso);if(Number.isNaN(d.getTime()))return '';const z=n=>String(n).padStart(2,'0');return `${d.getFullYear()}-${z(d.getMonth()+1)}-${z(d.getDate())}T${z(d.getHours())}:${z(d.getMinutes())}`}
+function fromLocalInput(value){if(!value)return null;const d=new Date(value);return Number.isNaN(d.getTime())?null:d.toISOString()}
+function refreshAdminDashboard(){
+ document.getElementById('adminProductCount').textContent=products.length;
+ document.getElementById('adminDiscountCount').textContent=products.filter(p=>activeDiscount(p)).length;
+ renderAdminProductTable(document.getElementById('adminTableSearch')?.value||'');
+}
+function renderAdminProductTable(q=''){
+ const wrap=document.getElementById('adminProductTableWrap');if(!wrap)return;
+ const query=q.toLocaleLowerCase('tr').trim();
+ const rows=products.filter(p=>!query||(p.brand+' '+p.name+' '+p.category).toLocaleLowerCase('tr').includes(query));
+ wrap.innerHTML=`<table class="adminTable"><thead><tr><th>Ürün</th><th>Kategori</th><th>Normal</th><th>Güncel</th><th>İndirim</th><th></th></tr></thead><tbody>${rows.map(p=>`<tr><td><b>${escapeHTML(p.brand)}</b><br>${escapeHTML(p.name)}</td><td>${escapeHTML(p.category)}</td><td>${money(p.price)}</td><td>${money(effectivePrice(p))}</td><td>${activeDiscount(p)?'%'+activeDiscount(p).percent:'—'}</td><td><button type="button" data-admin-edit="${p.id}">Yönet</button></td></tr>`).join('')}</tbody></table>`;
+ wrap.querySelectorAll('[data-admin-edit]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('proAdminProduct').value=b.dataset.adminEdit;loadProfessionalAdminProduct();switchRolePane('admin','discounts')}));
+}
+function loadProfessionalAdminProduct(){
+ const select=document.getElementById('proAdminProduct');if(!select)return;
+ const p=getProduct(Number(select.value||products[0].id));if(!p)return;
+ document.getElementById('proAdminDiscount').value=p.discountActive&&p.discountPercent!=null?String(p.discountPercent):'';
+ document.getElementById('proAdminCampaign').value=p.campaign||'';
+ document.getElementById('proAdminStart').value=toLocalInput(p.discountStart);
+ document.getElementById('proAdminEnd').value=toLocalInput(p.discountEnd);
+ document.getElementById('proAdminFeatured').value=String(Boolean(p.featured));
+ updateAdminPricePreview();
+}
+function updateAdminPricePreview(){
+ const p=getProduct(Number(document.getElementById('proAdminProduct')?.value));if(!p)return;
+ const raw=document.getElementById('proAdminDiscount').value;const percent=raw===''?0:Number(raw);
+ const discounted=roundMoney(p.price-(p.price*percent/100));
+ document.getElementById('adminPricePreview').innerHTML=`<b>Canlı önizleme</b><br>Normal fiyat: ${money(p.price)}<br>${percent?`İndirim: %${percent}<br>İndirimli fiyat: <strong style="color:var(--red)">${money(discounted)}</strong>`:'İndirim uygulanmıyor.'}`;
+}
+function refreshCommerce(){
+ products.forEach(p=>effectivePrice(p));renderShowcase();render();renderCart();renderWishlistState();refreshAdminDashboard();
+ if(activeProduct)openProductDetail(activeProduct.id,detailReturnFocus);
+}
+function saveProfessionalDiscount(){
+ const id=Number(document.getElementById('proAdminProduct').value);const raw=document.getElementById('proAdminDiscount').value;const percent=raw===''?null:Number(raw);
+ if(percent!==null&&!allowedDiscounts.has(percent)){document.getElementById('professionalAdminStatus').textContent='Geçersiz indirim oranı.';return}
+ if(percent===100&&!window.confirm('Bu ürünün fiyatı 0 TL olacaktır. Devam etmek istiyor musunuz?'))return;
+ const start=fromLocalInput(document.getElementById('proAdminStart').value),end=fromLocalInput(document.getElementById('proAdminEnd').value);
+ if(start&&end&&new Date(end)<=new Date(start)){document.getElementById('professionalAdminStatus').textContent='Bitiş tarihi başlangıçtan sonra olmalıdır.';return}
+ persistOverride(id,{discountActive:percent!==null,discountPercent:percent,discountStart:start,discountEnd:end,campaign:document.getElementById('proAdminCampaign').value.trim()||null,featured:document.getElementById('proAdminFeatured').value==='true'});
+ document.getElementById('professionalAdminStatus').textContent='Demo ürün ayarı kaydedildi. Mağaza fiyatları güncellendi; gerçek sunucuya gönderilmedi.';
+ refreshCommerce();loadProfessionalAdminProduct();
+}
+function removeProfessionalDiscount(){
+ const id=Number(document.getElementById('proAdminProduct').value);
+ persistOverride(id,{discountActive:false,discountPercent:null,discountStart:null,discountEnd:null,campaign:null});
+ document.getElementById('professionalAdminStatus').textContent='İndirim kaldırıldı.';refreshCommerce();loadProfessionalAdminProduct();
+}
+function resetProfessionalProduct(){
+ const id=Number(document.getElementById('proAdminProduct').value);const overrides=safeOverrides();delete overrides[String(id)];localStorage.setItem('detaycimDemoCatalog',JSON.stringify(overrides));
+ const p=getProduct(id);if(p){p.discountActive=false;p.discountPercent=null;p.discountStart=null;p.discountEnd=null;p.campaign=null;p.featured=false;p.isNewDemo=false;p.isBestsellerDemo=false;p.addedAt=null}
+ document.getElementById('professionalAdminStatus').textContent='Ürünün demo ayarları sıfırlandı.';refreshCommerce();loadProfessionalAdminProduct();
+}
+function renderCustomerFavorites(){
+ const box=document.getElementById('customerFavorites');if(!box)return;const items=wishlist.map(getProduct).filter(Boolean);
+ box.innerHTML=items.length?items.map(p=>`<div class="customerFavorite"><div><b>${escapeHTML(p.brand)}</b><br>${escapeHTML(p.name)}</div><strong>${money(effectivePrice(p))}</strong></div>`).join(''):'<div class="customerEmpty">Henüz favori ürün eklemediniz.</div>';
+}
+
 setup();
 const requestedProduct=new URLSearchParams(location.search).get('product');if(requestedProduct){const product=products.find(item=>item.slug===requestedProduct);if(product)openProductDetail(product.id)}
 </script>
