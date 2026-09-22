@@ -174,6 +174,40 @@ header .market a{display:grid!important;flex:0 0 auto}
   header .adminEntry,header .accountBtn,header .cartEntry{order:2}
 }
 @media(max-width:420px){header .market a{width:27px;height:27px;font-size:8px}}
+
+/* Detaycım Dükkan Müdürü — premium management workspace */
+.managerShell{background:#f6f7f8;color:#15171b;overflow:auto}
+.managerShell.open{display:block}
+.managerTop{height:70px;display:grid;grid-template-columns:260px minmax(280px,620px) 1fr;align-items:center;gap:22px;padding:0 24px;background:#fff;border-bottom:1px solid #e5e7ea;position:sticky;top:0;z-index:8}
+.managerBrand{display:flex;align-items:center;gap:14px}.managerBrand .logo{font-size:22px}.managerBrand>span{font-size:13px;font-weight:850;color:#6c727c;border-left:1px solid #ddd;padding-left:14px}
+.managerSearch{height:42px;border:1px solid #dfe2e6;border-radius:10px;background:#f8f9fa;display:flex;align-items:center;gap:9px;padding:0 13px}.managerSearch input{width:100%;border:0;outline:0;background:transparent;font-size:13px}.managerSearch span{color:#777}
+.managerTopActions{display:flex;justify-content:flex-end;align-items:center;gap:8px}.managerTopActions button{border:1px solid #dfe2e6;background:#fff;border-radius:9px;padding:10px 12px;font-size:12px;font-weight:800}.managerTopActions button:hover{border-color:#bfc4ca;background:#f6f7f8}
+.managerStatus{font-size:11px;font-weight:800;color:#5c636c;margin-right:5px}.managerStatus i{display:inline-block;width:7px;height:7px;background:#1b9b57;border-radius:50%;margin-right:6px}
+.managerLayout{min-height:calc(100vh - 70px);display:grid;grid-template-columns:260px minmax(0,1fr)}
+.managerSidebar{background:#fff;border-right:1px solid #e4e6e9;padding:20px 14px 26px;position:sticky;top:70px;height:calc(100vh - 70px);overflow:auto}
+.managerStore{display:flex;align-items:center;gap:11px;padding:4px 9px 18px;border-bottom:1px solid #eceef0;margin-bottom:10px}.managerAvatar{width:38px;height:38px;border-radius:11px;background:#15171b;color:#fff;display:grid;place-items:center;font-weight:950}.managerStore b,.managerStore small{display:block}.managerStore b{font-size:13px}.managerStore small{font-size:10px;color:#858b94;margin-top:3px}
+.managerNav{display:grid!important;gap:2px!important;font-size:12px!important}.managerNav button{width:100%;display:grid;grid-template-columns:22px 1fr auto;align-items:center;text-align:left;border:0;background:transparent;border-radius:8px;padding:10px 10px;color:#4f5660;font-size:12px;font-weight:750}.managerNav button span{font-size:14px;color:#737983}.managerNav button em{font-style:normal;background:#eef0f2;color:#555;border-radius:999px;min-width:24px;text-align:center;padding:3px 6px;font-size:9px}.managerNav button:hover{background:#f3f4f5;color:#111}.managerNav button.active{background:#17191d;color:#fff}.managerNav button.active span{color:#ff6268}.managerNav button.active em{background:#34373d;color:#fff}.managerNavGroup{font-size:9px;font-weight:950;letter-spacing:1.4px;color:#a0a5ad;padding:18px 10px 7px;text-transform:uppercase}
+.managerDemoNote{margin:20px 7px 0;padding:13px;border:1px solid #eceef0;border-radius:10px;background:#fafafa;color:#676e78;font-size:9px;font-weight:900;letter-spacing:.6px}.managerDemoNote small{display:block;font-size:9px;font-weight:500;line-height:1.5;letter-spacing:0;margin-top:5px}
+.managerContent{padding:34px clamp(22px,4vw,54px) 70px;min-width:0}.managerContent .rolePane{display:none}.managerContent .rolePane.active{display:block}
+.managerHeading{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:24px}.managerHeading h2{font-size:30px;letter-spacing:-1.1px;margin:4px 0 6px}.managerHeading p{max-width:720px;color:#747a83;font-size:12px;line-height:1.6;margin:0}.managerEyebrow{font-size:9px;font-weight:950;letter-spacing:1.6px;color:#d71922}
+.managerPrimary{border:0;border-radius:9px;background:#17191d;color:#fff;padding:11px 14px;font-size:11px;font-weight:850;white-space:nowrap}.managerPrimary:hover{background:#d71922}
+.managerAlert{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#17191d;color:#fff;border-radius:13px;padding:17px 19px;margin-bottom:26px}.managerAlert div{display:grid;gap:3px}.managerAlert b{font-size:12px}.managerAlert div span{font-size:10px;color:#b8bdc5}.managerAlert>span{font-size:9px;border:1px solid #3b3e44;border-radius:999px;padding:7px 9px;color:#d8dbe0}
+.managerSectionTitle{font-size:14px;margin:0 0 11px}.managerTasks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}.managerTasks button{display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:11px;text-align:left;border:1px solid #e1e4e7;background:#fff;border-radius:12px;padding:15px;transition:.18s}.managerTasks button:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(10,12,16,.06);border-color:#cdd1d6}.taskIcon{width:36px;height:36px;border-radius:9px;background:#f1f2f3;display:grid;place-items:center;font-weight:900}.managerTasks b,.managerTasks small{display:block}.managerTasks b{font-size:11px}.managerTasks small{font-size:9px;color:#858b94;line-height:1.45;margin-top:3px}.managerTasks strong{color:#a1a6ad}
+.managerStats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}.managerStats>div{background:#fff;border:1px solid #e1e4e7;border-radius:12px;padding:18px}.managerStats span,.managerStats small{display:block;color:#7a8089}.managerStats span{font-size:10px;font-weight:750}.managerStats strong{display:block;font-size:26px;letter-spacing:-1px;margin:8px 0 4px}.managerStats small{font-size:9px}
+.managerDashboardGrid{display:grid;grid-template-columns:1.25fr .75fr;gap:12px}.managerCard{background:#fff;border:1px solid #e1e4e7;border-radius:13px;padding:20px}.managerCardHead{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.managerCardHead h3{font-size:16px;margin:4px 0 15px}.managerPill{font-size:9px;background:#f1f2f3;border-radius:999px;padding:6px 8px;font-weight:850}
+.managerRows>div{display:flex;align-items:center;justify-content:space-between;gap:18px;border-top:1px solid #eceef0;padding:12px 0;font-size:11px}.managerRows>div:first-child{border-top:0}.managerRows b{font-size:10px}.managerRows .ok{color:#138a4b}.managerRows .pending{color:#986b00}
+.managerQuick{display:grid;grid-template-columns:1fr 1fr;gap:8px}.managerQuick button{min-height:76px;text-align:left;border:1px solid #e1e4e7;background:#fafafa;border-radius:10px;padding:13px;font-size:10px;font-weight:850}.managerQuick button:hover{background:#fff;border-color:#c7cbd0}
+.managerInput,.managerSelect,.managerCard select,.managerCard input{width:100%;border:1px solid #dfe2e6;background:#fff;border-radius:9px;padding:11px 12px;font-size:11px}.managerTableWrap{overflow:auto;margin-top:14px}.managerShell .adminTable{width:100%;border-collapse:collapse;font-size:10px}.managerShell .adminTable th{text-align:left;color:#858b94;font-size:9px;padding:10px;border-bottom:1px solid #e4e6e9;white-space:nowrap}.managerShell .adminTable td{padding:12px 10px;border-bottom:1px solid #eceef0;vertical-align:middle}.managerShell .adminTable button{border:1px solid #dfe2e6;background:#fff;border-radius:7px;padding:7px 9px;font-size:9px;font-weight:800}
+.managerEmpty{min-height:300px;border:1px solid #e1e4e7;background:#fff;border-radius:13px;display:grid;place-items:center;text-align:center;align-content:center;padding:40px}.managerEmpty>span{width:54px;height:54px;border-radius:15px;background:#f1f2f3;display:grid;place-items:center;font-size:21px}.managerEmpty h3{font-size:15px;margin:15px 0 6px}.managerEmpty p{max-width:600px;color:#7c828b;font-size:11px;line-height:1.6;margin:0}.managerEmpty button{margin-top:15px;border:1px solid #dfe2e6;background:#fff;border-radius:8px;padding:9px 12px;font-size:10px;font-weight:800}
+.managerFilterBar{display:flex;gap:7px;margin-bottom:12px;overflow:auto}.managerFilterBar button{border:1px solid #dfe2e6;background:#fff;border-radius:8px;padding:9px 11px;font-size:10px;font-weight:750;white-space:nowrap}.managerFilterBar button.active{background:#17191d;color:#fff;border-color:#17191d}.managerFilterBar b{margin-left:5px}
+.managerChecklist{display:grid;gap:9px}.managerChecklist>div{display:grid;grid-template-columns:38px 1fr;gap:13px;background:#fff;border:1px solid #e1e4e7;border-radius:11px;padding:16px}.managerChecklist>div>span{width:34px;height:34px;border-radius:50%;background:#f3f4f5;display:grid;place-items:center;font-weight:900}.managerChecklist .done>span{background:#eaf7ef;color:#138a4b}.managerChecklist b{font-size:11px}.managerChecklist p{font-size:10px;color:#7d838c;line-height:1.5;margin:4px 0 0}
+.managerChart{background:#fff;border:1px solid #e1e4e7;border-radius:13px;padding:19px}.chartHead{display:flex;justify-content:space-between;gap:15px;font-size:11px}.chartHead span{font-size:9px;color:#858b94}.chartBlank{height:260px;margin-top:18px;border-left:1px solid #e5e7e9;border-bottom:1px solid #e5e7e9;background:repeating-linear-gradient(to bottom,transparent 0,transparent 64px,#f1f2f3 65px);display:grid;place-items:center;color:#9a9fa7;font-size:10px}
+.integrationGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.integrationCard{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:12px;background:#fff;border:1px solid #e1e4e7;border-radius:12px;padding:16px}.integrationCard>span{width:40px;height:40px;border-radius:10px;background:#17191d;color:#fff;display:grid;place-items:center;font-size:10px;font-weight:950}.integrationCard b,.integrationCard small{display:block}.integrationCard b{font-size:11px}.integrationCard small{font-size:9px;color:#858b94;margin-top:4px}.integrationCard em{font-style:normal;font-size:9px;font-weight:850;color:#986b00;background:#fff7df;border-radius:999px;padding:6px 8px}
+.managerShell .manageGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.managerShell .manageField{display:grid;gap:6px}.managerShell .manageField label{font-size:10px;font-weight:850}.managerShell .manageField small{font-size:9px;color:#858b94}.managerShell .bulkProductsField{grid-column:1/-1}.managerShell .adminPreview{margin-top:14px;border:1px solid #e1e4e7;background:#f8f9fa;border-radius:10px;padding:14px;font-size:10px;line-height:1.6}.managerShell .manageActions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.managerShell .manageActions .btn{font-size:10px;padding:11px 13px}.managerShell .dangerBtn{background:#fff0f0;color:#b20e15;border:1px solid #f0c7c9}.managerShell .secondaryBtn{background:#f1f2f3;color:#333}.managerShell .statusMsg{min-height:22px;margin-top:10px;font-size:10px;color:#626973}
+@media(max-width:1050px){.managerTop{grid-template-columns:220px 1fr}.managerTopActions{grid-column:1/-1;display:none}.managerLayout{grid-template-columns:220px}.managerTasks{grid-template-columns:1fr}.managerStats{grid-template-columns:repeat(2,1fr)}.managerDashboardGrid{grid-template-columns:1fr}}
+@media(max-width:760px){.managerTop{height:auto;min-height:68px;grid-template-columns:1fr auto;padding:12px 14px}.managerBrand>span{display:none}.managerSearch{grid-column:1/-1;grid-row:2}.managerLayout{display:block}.managerSidebar{position:sticky;top:0;height:auto;z-index:7;border-right:0;border-bottom:1px solid #e4e6e9;padding:8px 10px}.managerStore,.managerNavGroup,.managerDemoNote{display:none}.managerNav{display:flex!important;overflow:auto!important;gap:5px!important}.managerNav button{display:flex;width:auto;min-width:max-content;gap:7px;padding:9px 10px}.managerNav button em{display:none}.managerContent{padding:24px 14px 55px}.managerHeading{display:block}.managerHeading .managerPrimary{margin-top:13px}.managerStats{grid-template-columns:1fr 1fr}.managerTasks{grid-template-columns:1fr}.integrationGrid{grid-template-columns:1fr}.managerShell .manageGrid{grid-template-columns:1fr}.managerShell .bulkProductsField{grid-column:auto}.managerQuick{grid-template-columns:1fr}.managerAlert{align-items:flex-start}.managerAlert>span{display:none}}
+@media(max-width:430px){.managerStats{grid-template-columns:1fr}.managerHeading h2{font-size:25px}.managerContent{padding-left:11px;padding-right:11px}}
+
 </style>
 </head>
 <body data-role="admin">
@@ -233,49 +267,164 @@ header .market a{display:grid!important;flex:0 0 auto}
 </main>
 
 
-<div class="roleShell" id="adminShell" aria-hidden="true">
-  <div class="roleTop"><div class="wrap"><div class="logo">DETAY<i>CIM</i></div><div class="roleTitle">Yönetim Paneli</div><span class="demoRibbon">DEMO • Tarayıcıda saklanır</span><button class="adminViewSwitch" type="button" onclick="previewCustomerRole()">Müşteri Görünümünü Test Et</button><button class="roleClose" type="button" onclick="closeAdminPanel()">← Mağazaya Dön</button></div></div>
-  <div class="wrap roleLayout">
-    <nav class="roleNav" aria-label="Yönetim menüsü">
-      <button class="active" data-admin-pane="dashboard">Dashboard</button>
-      <button data-admin-pane="products">Ürünler</button>
-      <button data-admin-pane="discounts">İndirimler</button>
-      <button data-admin-pane="campaigns">Kampanyalar</button>
-      <button data-admin-pane="orders">Siparişler</button>
-      <button data-admin-pane="customers">Müşteriler</button>
-      <button data-admin-pane="inventory">Stok</button>
-      <button data-admin-pane="shipping">Kargo</button>
-      <button data-admin-pane="integrations">Entegrasyonlar</button>
-    </nav>
-    <div class="roleContent">
-      <section class="rolePane active" data-admin-content="dashboard">
-        <h2>Detaycım Yönetim Paneli</h2><p class="demoNote">Bu statik demo gerçek yetkilendirme/veritabanı değildir. Production sürümünde admin erişimi sunucu tarafında korunmalıdır.</p>
-        <div class="dashGrid"><div class="statCard"><small>Katalog</small><strong id="adminProductCount">0</strong><span>ürün</span></div><div class="statCard"><small>Aktif demo indirimi</small><strong id="adminDiscountCount">0</strong><span>ürün</span></div><div class="statCard"><small>Canlı sipariş verisi</small><strong>—</strong><span>backend gerekli</span></div></div>
-      </section>
-      <section class="rolePane" data-admin-content="products"><h2>Ürünler</h2><div class="manageCard"><input id="adminTableSearch" class="search" type="search" placeholder="Ürün, marka veya kategori ara…"><div id="adminProductTableWrap" style="margin-top:12px"></div></div></section>
-      <section class="rolePane" data-admin-content="discounts">
-        <h2>İndirim Yönetimi</h2>
-        <div class="manageCard"><div class="bulkIntro"><b>İndirim kapsamı</b><span>Tek ürün, seçili birden fazla ürün veya tüm katalog için aynı kampanyayı uygulayın.</span></div><div class="manageGrid">
-          <div class="manageField"><label>Uygulama tipi</label><select id="proAdminScope"><option value="single">Tek ürün</option><option value="multiple">Birden fazla ürün</option><option value="all">Tüm ürünler</option></select></div>
-          <div class="manageField" id="singleProductField"><label>Ürün</label><select id="proAdminProduct"></select></div>
-          <div class="manageField bulkProductsField" id="multiProductField" hidden><label>Birden fazla ürün seç</label><select id="proAdminProducts" multiple size="8"></select><small>Ctrl tuşuna basılı tutarak birden fazla ürün seçebilirsiniz.</small></div>
-          <div class="manageField"><label>İndirim</label><select id="proAdminDiscount"><option value="">İndirim yok</option><option value="5">%5</option><option value="10">%10</option><option value="15">%15</option><option value="20">%20</option><option value="25">%25</option><option value="50">%50</option><option value="80">%80</option><option value="100">%100</option></select></div>
-          <div class="manageField"><label>Kampanya adı</label><input id="proAdminCampaign" placeholder="Örn. Hafta Sonu Kampanyası"></div>
-          <div class="manageField"><label>Başlangıç</label><input id="proAdminStart" type="datetime-local"></div>
-          <div class="manageField"><label>Bitiş</label><input id="proAdminEnd" type="datetime-local"></div>
-          <div class="manageField"><label>Vitrin</label><select id="proAdminFeatured"><option value="false">Hayır</option><option value="true">Evet</option></select></div>
-        </div>
-        <div class="adminPreview" id="adminPricePreview"></div>
-        <div class="manageActions"><button class="btn primary" type="button" onclick="saveProfessionalDiscount()">Seçili Kapsama İndirimi Uygula</button><button class="btn dangerBtn" type="button" onclick="removeProfessionalDiscount()">Seçili Kapsamdan İndirimi Kaldır</button><button class="btn secondaryBtn" type="button" onclick="resetProfessionalProduct()">Ürün Demo Ayarlarını Sıfırla</button></div>
-        <div id="professionalAdminStatus" class="statusMsg" aria-live="polite"></div></div>
-      </section>
-      <section class="rolePane" data-admin-content="campaigns"><h2>Kampanyalar</h2><div class="customerEmpty">Kampanya mimarisi hazır. Gerçek kampanyalar işletme kararıyla oluşturulmalıdır; sistem sahte kampanya üretmez. Ürün bazlı kampanyalar İndirimler bölümünden tarihli olarak yönetilebilir.</div></section>
-      <section class="rolePane" data-admin-content="orders"><h2>Siparişler</h2><div class="customerEmpty">Canlı sipariş verisi backend ve ödeme altyapısı bağlandıktan sonra burada görüntülenecek.</div></section>
-      <section class="rolePane" data-admin-content="customers"><h2>Müşteriler</h2><div class="customerEmpty">Canlı müşteri verisi güvenli üyelik/backend bağlantısı sonrası görüntülenecek.</div></section>
-      <section class="rolePane" data-admin-content="inventory"><h2>Stok</h2><div class="customerEmpty">Gerçek stok miktarları işletme verisi ve stok entegrasyonu olmadan tahmin edilmez.</div></section>
-      <section class="rolePane" data-admin-content="shipping"><h2>Kargo</h2><div class="customerEmpty">Kg bazlı hesaplama için ürün ağırlıkları ve işletmenin kargo tarifesi gereklidir.</div></section>
-      <section class="rolePane" data-admin-content="integrations"><h2>Entegrasyonlar</h2><div class="manageCard"><div class="row"><span>Ödeme sağlayıcısı</span><span class="pending">Bağlı değil</span></div><div class="row"><span>Bizim Hesap</span><span class="pending">Bağlı değil</span></div><div class="row"><span>Kargo API</span><span class="pending">Bağlı değil</span></div><div class="row"><span>WhatsApp Business Cloud API</span><span class="pending">Bağlı değil</span></div><div class="row"><span>Auth + Database</span><span class="pending">Bağlı değil</span></div></div></section>
+
+<div class="roleShell managerShell" id="adminShell" aria-hidden="true">
+  <div class="managerTop">
+    <div class="managerBrand"><div class="logo">DETAY<i>CIM</i></div><span>Dükkan Müdürü</span></div>
+    <div class="managerSearch"><span>⌕</span><input id="managerGlobalSearch" type="search" placeholder="Ürün, sipariş, müşteri veya ayar ara…" aria-label="Dükkan Müdürü araması"></div>
+    <div class="managerTopActions">
+      <span class="managerStatus"><i></i> Demo güvenli</span>
+      <button type="button" onclick="previewCustomerRole()">Müşteri görünümü</button>
+      <button type="button" onclick="closeAdminPanel()">Mağazaya dön</button>
     </div>
+  </div>
+  <div class="managerLayout">
+    <aside class="managerSidebar" aria-label="Dükkan Müdürü menüsü">
+      <div class="managerStore">
+        <div class="managerAvatar">D</div>
+        <div><b>Detaycım</b><small>Mağaza yönetimi</small></div>
+      </div>
+      <nav class="managerNav">
+        <button class="active" data-admin-pane="dashboard"><span>⌂</span>Dashboard</button>
+        <button data-admin-pane="products"><span>▦</span>Ürünler <em id="managerProductBadge">0</em></button>
+        <button data-admin-pane="messages"><span>✉</span>Mesajlar</button>
+        <button data-admin-pane="orders"><span>▣</span>Siparişler</button>
+        <button data-admin-pane="visibility"><span>◎</span>Mağaza görünürlüğü</button>
+        <div class="managerNavGroup">Analiz</div>
+        <button data-admin-pane="analytics"><span>▥</span>İstatistikler</button>
+        <button data-admin-pane="customers"><span>♟</span>Müşteriler</button>
+        <div class="managerNavGroup">Satış yönetimi</div>
+        <button data-admin-pane="discounts"><span>%</span>İndirimler <em id="managerDiscountBadge">0</em></button>
+        <button data-admin-pane="campaigns"><span>⚑</span>Kampanyalar</button>
+        <button data-admin-pane="inventory"><span>▤</span>Stok</button>
+        <button data-admin-pane="shipping"><span>↗</span>Kargo</button>
+        <button data-admin-pane="finance"><span>₺</span>Mali Durum</button>
+        <div class="managerNavGroup">Sistem</div>
+        <button data-admin-pane="integrations"><span>⛓</span>Entegrasyonlar</button>
+        <button data-admin-pane="help"><span>?</span>Yardım</button>
+        <button data-admin-pane="settings"><span>⚙</span>Ayarlar</button>
+      </nav>
+      <div class="managerDemoNote">DEMO MODU<br><small>Gerçek ödeme, sipariş ve müşteri verisi oluşturulmaz.</small></div>
+    </aside>
+
+    <main class="managerContent">
+      <section class="rolePane active" data-admin-content="dashboard">
+        <div class="managerHeading"><div><span class="managerEyebrow">DÜKKAN MÜDÜRÜ</span><h2>Tekrar hoş geldiniz, Detaycım</h2><p>Mağazanın operasyon, katalog ve entegrasyon hazırlığını tek merkezden yönetin.</p></div><button class="managerPrimary" type="button" onclick="switchRolePane('admin','products')">Ürünleri yönet</button></div>
+        <div class="managerAlert"><div><b>Onay demosu</b><span>Bu panel gerçek işletme verisi bağlanmadan sahte sipariş, gelir veya müşteri üretmez.</span></div><span>Production hazırlığı</span></div>
+        <h3 class="managerSectionTitle">En önemli görevler</h3>
+        <div class="managerTasks">
+          <button type="button" onclick="switchRolePane('admin','integrations')"><span class="taskIcon">⛓</span><span><b>Entegrasyonlar</b><small>Ödeme, Bizim Hesap, kargo ve WhatsApp bağlantıları</small></span><strong>→</strong></button>
+          <button type="button" onclick="switchRolePane('admin','inventory')"><span class="taskIcon">▤</span><span><b>Stok verisi</b><small>Gerçek stok miktarları işletme verisi bekliyor</small></span><strong>→</strong></button>
+          <button type="button" onclick="switchRolePane('admin','visibility')"><span class="taskIcon">◎</span><span><b>Mağaza görünürlüğü</b><small>Katalog ve vitrin hazırlığını kontrol edin</small></span><strong>→</strong></button>
+        </div>
+        <div class="managerStats">
+          <div><span>Toplam ürün</span><strong id="adminProductCount">0</strong><small>Katalog</small></div>
+          <div><span>Aktif indirim</span><strong id="adminDiscountCount">0</strong><small>Demo kampanya</small></div>
+          <div><span>Siparişler</span><strong>—</strong><small>Backend gerekli</small></div>
+          <div><span>Gelir</span><strong>—</strong><small>Ödeme verisi gerekli</small></div>
+        </div>
+        <div class="managerDashboardGrid">
+          <div class="managerCard"><div class="managerCardHead"><div><span class="managerEyebrow">MAĞAZA DURUMU</span><h3>Operasyon hazırlığı</h3></div><span class="managerPill">Demo</span></div>
+            <div class="managerRows"><div><span>Katalog ve ürün keşfi</span><b class="ok">Hazır</b></div><div><span>Sepet / favoriler</span><b class="ok">Hazır</b></div><div><span>İndirim yönetimi</span><b class="ok">Hazır</b></div><div><span>Ödeme & sipariş backend</span><b class="pending">Bağlantı gerekli</b></div><div><span>Bizim Hesap / kargo / WhatsApp</span><b class="pending">Erişim gerekli</b></div></div>
+          </div>
+          <div class="managerCard"><div class="managerCardHead"><div><span class="managerEyebrow">HIZLI İŞLEMLER</span><h3>Yönetim kısayolları</h3></div></div>
+            <div class="managerQuick"><button onclick="switchRolePane('admin','discounts')">% İndirim oluştur</button><button onclick="switchRolePane('admin','products')">▦ Ürün ara</button><button onclick="switchRolePane('admin','shipping')">↗ Kargoyu hazırla</button><button onclick="previewCustomerRole()">◉ Müşteri görünümü</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rolePane" data-admin-content="products">
+        <div class="managerHeading"><div><span class="managerEyebrow">KATALOG</span><h2>Ürünler</h2><p>59 ürünlük mevcut kataloğu arayın, fiyat ve kampanya durumunu kontrol edin.</p></div></div>
+        <div class="managerCard"><input id="adminTableSearch" class="managerInput" type="search" placeholder="Ürün, marka veya kategori ara…"><div id="adminProductTableWrap" class="managerTableWrap"></div></div>
+      </section>
+
+      <section class="rolePane" data-admin-content="messages">
+        <div class="managerHeading"><div><span class="managerEyebrow">İLETİŞİM</span><h2>Mesajlar</h2><p>WhatsApp Business bağlantısı sonrası müşteri konuşmaları burada merkezi olarak yönetilecek.</p></div></div>
+        <div class="managerEmpty"><span>✉</span><h3>Canlı mesaj kutusu henüz bağlı değil</h3><p>Demo sahte müşteri konuşmaları üretmez. WhatsApp Business Cloud API ve yetkilendirme tamamlandığında konuşma listesi, okunmamış mesajlar ve temsilci devri burada çalışacak.</p><button onclick="switchRolePane('admin','integrations')">Entegrasyon durumuna git</button></div>
+      </section>
+
+      <section class="rolePane" data-admin-content="orders">
+        <div class="managerHeading"><div><span class="managerEyebrow">OPERASYON</span><h2>Siparişler</h2><p>Ödeme ve sipariş backend'i bağlandığında yeni, hazırlanan, kargolanan ve tamamlanan siparişler burada yönetilecek.</p></div></div>
+        <div class="managerFilterBar"><button class="active">Yeni <b>0</b></button><button>Hazırlanıyor <b>0</b></button><button>Kargoda <b>0</b></button><button>Tamamlandı <b>0</b></button></div>
+        <div class="managerEmpty"><span>▣</span><h3>Gösterilecek gerçek sipariş yok</h3><p>Canlı ödeme/sipariş sistemi bağlı olmadığı için bu alanda örnek sipariş gösterilmiyor.</p></div>
+      </section>
+
+      <section class="rolePane" data-admin-content="visibility">
+        <div class="managerHeading"><div><span class="managerEyebrow">MAĞAZA</span><h2>Mağaza görünürlüğü</h2><p>Müşterinin gördüğü mağaza deneyiminin hazırlık durumunu kontrol edin.</p></div><button class="managerPrimary" onclick="previewCustomerRole()">Müşteri olarak görüntüle</button></div>
+        <div class="managerChecklist"><div class="done"><span>✓</span><div><b>Mağaza kimliği</b><p>Detaycım marka görünümü ve mobil mağaza arayüzü hazır.</p></div></div><div class="done"><span>✓</span><div><b>Katalog</b><p>Ürün kataloğu, kategori, marka, fiyat filtreleri ve ürün detayları hazır.</p></div></div><div class="done"><span>✓</span><div><b>Alışveriş deneyimi</b><p>Sepet, favoriler ve WhatsApp ürün danışmanlığı demo akışında çalışır.</p></div></div><div><span>!</span><div><b>Canlı satış altyapısı</b><p>Ödeme, stok, kargo ve sipariş servisleri production bağlantısı bekliyor.</p></div></div></div>
+      </section>
+
+      <section class="rolePane" data-admin-content="analytics">
+        <div class="managerHeading"><div><span class="managerEyebrow">İSTATİSTİKLER</span><h2>Mağaza istatistikleri</h2><p>Gerçek trafik ve satış analitiği bağlandığında performans burada izlenecek.</p></div><select class="managerSelect" disabled><option>Tüm zamanlar</option></select></div>
+        <div class="managerStats"><div><span>Görüntülenme</span><strong>—</strong><small>Analitik gerekli</small></div><div><span>Ziyaretler</span><strong>—</strong><small>Analitik gerekli</small></div><div><span>Siparişler</span><strong>—</strong><small>Backend gerekli</small></div><div><span>Gelir</span><strong>—</strong><small>Ödeme verisi gerekli</small></div></div>
+        <div class="managerChart"><div class="chartHead"><b>Performans grafiği</b><span>Canlı veri bağlandığında otomatik oluşur</span></div><div class="chartBlank"><span>Gerçek analitik verisi bekleniyor</span></div></div>
+      </section>
+
+      <section class="rolePane" data-admin-content="customers">
+        <div class="managerHeading"><div><span class="managerEyebrow">CRM</span><h2>Müşteriler</h2><p>Güvenli üyelik sistemi bağlandıktan sonra müşteri profilleri, adresler ve sipariş geçmişi burada yönetilecek.</p></div></div>
+        <div class="managerEmpty"><span>♟</span><h3>Gerçek müşteri verisi bulunmuyor</h3><p>Kişisel veriler demo amacıyla üretilmez veya tarayıcıda saklanmaz.</p></div>
+      </section>
+
+      <section class="rolePane" data-admin-content="discounts">
+        <div class="managerHeading"><div><span class="managerEyebrow">SATIŞ YÖNETİMİ</span><h2>İndirimler</h2><p>Tek ürün, seçili ürünler veya tüm katalog için kontrollü indirim uygulayın.</p></div></div>
+        <div class="managerCard">
+          <div class="manageGrid">
+            <div class="manageField"><label>Uygulama tipi</label><select id="proAdminScope"><option value="single">Tek ürün</option><option value="multiple">Birden fazla ürün</option><option value="all">Tüm ürünler</option></select></div>
+            <div class="manageField" id="singleProductField"><label>Ürün</label><select id="proAdminProduct"></select></div>
+            <div class="manageField bulkProductsField" id="multiProductField" hidden><label>Birden fazla ürün seç</label><select id="proAdminProducts" multiple size="8"></select><small>Windows: Ctrl, Mac: ⌘ ile birden fazla ürün seçebilirsiniz.</small></div>
+            <div class="manageField"><label>İndirim</label><select id="proAdminDiscount"><option value="">İndirim yok</option><option value="5">%5</option><option value="10">%10</option><option value="15">%15</option><option value="20">%20</option><option value="25">%25</option><option value="50">%50</option><option value="80">%80</option><option value="100">%100</option></select></div>
+            <div class="manageField"><label>Kampanya adı</label><input id="proAdminCampaign" placeholder="Örn. Hafta Sonu Kampanyası"></div>
+            <div class="manageField"><label>Başlangıç</label><input id="proAdminStart" type="datetime-local"></div>
+            <div class="manageField"><label>Bitiş</label><input id="proAdminEnd" type="datetime-local"></div>
+            <div class="manageField"><label>Vitrin</label><select id="proAdminFeatured"><option value="false">Hayır</option><option value="true">Evet</option></select></div>
+          </div>
+          <div class="adminPreview" id="adminPricePreview"></div>
+          <div class="manageActions"><button class="btn primary" type="button" onclick="saveProfessionalDiscount()">İndirimi uygula</button><button class="btn dangerBtn" type="button" onclick="removeProfessionalDiscount()">İndirimi kaldır</button><button class="btn secondaryBtn" type="button" onclick="resetProfessionalProduct()">Demo ayarlarını sıfırla</button></div>
+          <div id="professionalAdminStatus" class="statusMsg" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="rolePane" data-admin-content="campaigns">
+        <div class="managerHeading"><div><span class="managerEyebrow">PAZARLAMA</span><h2>Kampanyalar</h2><p>Tarih aralıklı ürün kampanyaları İndirimler bölümündeki gerçek katalog verisi üzerinden yönetilir.</p></div><button class="managerPrimary" onclick="switchRolePane('admin','discounts')">İndirim oluştur</button></div>
+        <div class="managerEmpty"><span>⚑</span><h3>Aktif kampanya özeti</h3><p id="managerCampaignSummary">Aktif kampanya bulunmuyor.</p></div>
+      </section>
+
+      <section class="rolePane" data-admin-content="inventory">
+        <div class="managerHeading"><div><span class="managerEyebrow">OPERASYON</span><h2>Stok</h2><p>Gerçek stok miktarları Bizim Hesap veya işletme stok kaynağı bağlandıktan sonra yönetilecek.</p></div></div>
+        <div class="managerEmpty"><span>▤</span><h3>Stok sayıları tahmin edilmiyor</h3><p>Ürünleri “stokta” veya “tükendi” göstermek için doğrulanmış işletme verisi gereklidir.</p></div>
+      </section>
+
+      <section class="rolePane" data-admin-content="shipping">
+        <div class="managerHeading"><div><span class="managerEyebrow">KARGO</span><h2>Kargo yönetimi</h2><p>Kg/desi tabanlı kargo hesabı için ürün ağırlıkları, paket ölçüleri ve işletmenin kargo tarifesi gereklidir.</p></div></div>
+        <div class="managerCard"><div class="managerRows"><div><span>Ürün ağırlıkları</span><b class="pending">Veri gerekli</b></div><div><span>Kargo sözleşmesi</span><b class="pending">İşletme hesabı gerekli</b></div><div><span>Kargo API</span><b class="pending">Bağlı değil</b></div><div><span>Takip numarası senkronizasyonu</span><b class="pending">Backend gerekli</b></div></div></div>
+      </section>
+
+      <section class="rolePane" data-admin-content="finance">
+        <div class="managerHeading"><div><span class="managerEyebrow">MALİ DURUM</span><h2>Mali Durum</h2><p>Gerçek tahsilat, komisyon ve sipariş verisi bağlanmadan finansal rakam üretilmez.</p></div></div>
+        <div class="managerStats"><div><span>Brüt satış</span><strong>—</strong><small>Ödeme verisi gerekli</small></div><div><span>Net satış</span><strong>—</strong><small>Backend gerekli</small></div><div><span>İade</span><strong>—</strong><small>Backend gerekli</small></div><div><span>Bekleyen ödeme</span><strong>—</strong><small>Sağlayıcı gerekli</small></div></div>
+      </section>
+
+      <section class="rolePane" data-admin-content="integrations">
+        <div class="managerHeading"><div><span class="managerEyebrow">SİSTEM</span><h2>Entegrasyonlar</h2><p>Production için gerekli servislerin bağlantı durumunu takip edin.</p></div></div>
+        <div class="integrationGrid">
+          <div class="integrationCard"><span>₺</span><div><b>Ödeme sağlayıcısı</b><small>Merchant hesabı ve API anahtarları</small></div><em>Bağlı değil</em></div>
+          <div class="integrationCard"><span>BH</span><div><b>Bizim Hesap</b><small>Ürün, stok ve muhasebe senkronizasyonu</small></div><em>Bağlı değil</em></div>
+          <div class="integrationCard"><span>↗</span><div><b>Kargo API</b><small>Kg/desi, etiket ve takip</small></div><em>Bağlı değil</em></div>
+          <div class="integrationCard"><span>WA</span><div><b>WhatsApp Business</b><small>Otomatik yanıt ve insan temsilci devri</small></div><em>Bağlı değil</em></div>
+          <div class="integrationCard"><span>DB</span><div><b>Auth + Database</b><small>Güvenli müşteri ve yönetici erişimi</small></div><em>Bağlı değil</em></div>
+        </div>
+      </section>
+
+      <section class="rolePane" data-admin-content="help">
+        <div class="managerHeading"><div><span class="managerEyebrow">DESTEK</span><h2>Yardım</h2><p>Dükkan Müdürü için operasyon kontrol listesi.</p></div></div>
+        <div class="managerChecklist"><div class="done"><span>1</span><div><b>Katalog yönetimi</b><p>Ürünleri Ürünler bölümünden arayın; indirimleri İndirimler bölümünden yönetin.</p></div></div><div><span>2</span><div><b>Canlı satışa geçiş</b><p>Ödeme, veritabanı, Bizim Hesap ve kargo erişimlerini işletme hesabıyla bağlayın.</p></div></div><div><span>3</span><div><b>Yayın öncesi test</b><p>Müşteri görünümü, mobil görünüm, sepet, ödeme, stok ve sipariş akışını uçtan uca test edin.</p></div></div></div>
+      </section>
+
+      <section class="rolePane" data-admin-content="settings">
+        <div class="managerHeading"><div><span class="managerEyebrow">AYARLAR</span><h2>Mağaza ayarları</h2><p>Production sürümünde şirket, iletişim, bildirim, kullanıcı ve güvenlik ayarları burada yönetilecek.</p></div></div>
+        <div class="managerCard"><div class="managerRows"><div><span>Mağaza adı</span><b>Detaycım</b></div><div><span>Yönetim modu</span><b>Demo</b></div><div><span>Gerçek yönetici kimlik doğrulaması</span><b class="pending">Backend gerekli</b></div><div><span>2FA / oturum güvenliği</span><b class="pending">Production aşaması</b></div></div></div>
+      </section>
+    </main>
   </div>
 </div>
 
@@ -550,6 +699,42 @@ document.getElementById('detailModal').addEventListener('keydown',trapDetailFocu
 document.addEventListener('click',event=>{if(!event.target.closest('.searchWrap'))document.getElementById('searchSuggestions').classList.remove('open')});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(activeProduct)closeProductDetail();else if(document.getElementById('accountBackdrop').classList.contains('open'))closeAccount();else closeCart()}});
 
+
+function updateManagerChrome(){
+  const productBadge=document.getElementById('managerProductBadge');
+  const discountBadge=document.getElementById('managerDiscountBadge');
+  if(productBadge) productBadge.textContent=products.length;
+  const activeCount=products.filter(p=>activeDiscount(p)).length;
+  if(discountBadge) discountBadge.textContent=activeCount;
+  const summary=document.getElementById('managerCampaignSummary');
+  if(summary){
+    const active=products.filter(p=>activeDiscount(p));
+    summary.textContent=active.length ? `${active.length} üründe aktif demo indirimi bulunuyor. Detayları İndirimler bölümünden yönetebilirsiniz.` : 'Aktif kampanya bulunmuyor.';
+  }
+}
+function setupManagerSearch(){
+  const input=document.getElementById('managerGlobalSearch');
+  if(!input || input.dataset.ready) return;
+  input.dataset.ready='1';
+  const routes=[
+    ['ürün','products'],['katalog','products'],['mesaj','messages'],['sipariş','orders'],
+    ['görünür','visibility'],['istatistik','analytics'],['trafik','analytics'],['müşteri','customers'],
+    ['indirim','discounts'],['kampanya','campaigns'],['stok','inventory'],['kargo','shipping'],
+    ['mali','finance'],['gelir','finance'],['ödeme','integrations'],['bizim hesap','integrations'],
+    ['whatsapp','integrations'],['entegrasyon','integrations'],['yardım','help'],['ayar','settings']
+  ];
+  input.addEventListener('keydown',e=>{
+    if(e.key!=='Enter') return;
+    const q=input.value.toLocaleLowerCase('tr').trim();
+    if(!q) return;
+    const hit=routes.find(([key])=>q.includes(key));
+    if(hit){switchRolePane('admin',hit[1]);input.blur();return}
+    switchRolePane('admin','products');
+    const productSearch=document.getElementById('adminTableSearch');
+    if(productSearch){productSearch.value=input.value;renderAdminProductTable(input.value)}
+  });
+}
+
 function setDemoRole(role){
  const safe=role==='customer'?'customer':'admin';
  document.body.dataset.role=safe;
@@ -570,7 +755,7 @@ function returnToAdminFromCustomer(){
  openAdminPanel();
 }
 
-function openAdminPanel(){document.getElementById('adminShell').classList.add('open');document.getElementById('adminShell').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';refreshAdminDashboard();loadProfessionalAdminProduct()}
+function openAdminPanel(){const shell=document.getElementById('adminShell');shell.classList.add('open');shell.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';refreshAdminDashboard();loadProfessionalAdminProduct();setupManagerSearch()}
 function closeAdminPanel(){document.getElementById('adminShell').classList.remove('open');document.getElementById('adminShell').setAttribute('aria-hidden','true');document.body.style.overflow=''}
 function openCustomerPanel(){const shell=document.getElementById('customerShell');shell.classList.add('open');shell.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderCustomerFavorites()}
 function closeCustomerPanel(){document.getElementById('customerShell').classList.remove('open');document.getElementById('customerShell').setAttribute('aria-hidden','true');document.body.style.overflow=''}
@@ -587,9 +772,11 @@ function persistOverride(id,patch){const overrides=safeOverrides();overrides[Str
 function toLocalInput(iso){if(!iso)return '';const d=new Date(iso);if(Number.isNaN(d.getTime()))return '';const z=n=>String(n).padStart(2,'0');return `${d.getFullYear()}-${z(d.getMonth()+1)}-${z(d.getDate())}T${z(d.getHours())}:${z(d.getMinutes())}`}
 function fromLocalInput(value){if(!value)return null;const d=new Date(value);return Number.isNaN(d.getTime())?null:d.toISOString()}
 function refreshAdminDashboard(){
- document.getElementById('adminProductCount').textContent=products.length;
- document.getElementById('adminDiscountCount').textContent=products.filter(p=>activeDiscount(p)).length;
+ const pc=document.getElementById('adminProductCount'),dc=document.getElementById('adminDiscountCount');
+ if(pc)pc.textContent=products.length;
+ if(dc)dc.textContent=products.filter(p=>activeDiscount(p)).length;
  renderAdminProductTable(document.getElementById('adminTableSearch')?.value||'');
+ updateManagerChrome();
 }
 function renderAdminProductTable(q=''){
  const wrap=document.getElementById('adminProductTableWrap');if(!wrap)return;
