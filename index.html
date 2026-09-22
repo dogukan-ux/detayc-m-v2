@@ -244,10 +244,10 @@ header .market a{display:grid!important;flex:0 0 auto}
 <div class="sectionTop"><div><div class="kicker">MAĞAZA</div><h2>Öne çıkan ürünler</h2></div><p>Doğrulanan gerçek katalog verileriyle.</p></div>
 <div class="toolbar"><div class="searchWrap"><input id="search" class="search" type="search" aria-label="Ürün veya marka ara" autocomplete="off" placeholder="Ürün, marka veya kategori ara…" oninput="render()"><div id="searchSuggestions" class="searchSuggestions" role="listbox"></div></div><select id="categoryFilter" class="select" aria-label="Kategori seç" onchange="setCategoryFromFilter()"><option value="Tümü">Tüm kategoriler</option></select><select id="brandFilter" class="select" aria-label="Marka seç" onchange="render()"><option value="">Tüm markalar</option></select><select id="priceFilter" class="select" aria-label="Fiyat aralığı seç" onchange="render()"><option value="">Tüm fiyatlar</option><option value="0-1000">0 – 1.000 TL</option><option value="1000-2500">1.000 – 2.500 TL</option><option value="2500-999999">2.500 TL ve üzeri</option></select><select id="sortFilter" class="select" aria-label="Sıralama seç" onchange="render()"><option value="">Önerilen sıralama</option><option value="az">A-Z</option><option value="low">Fiyat: Artan</option><option value="high">Fiyat: Azalan</option><option value="discount">En yüksek indirim</option><option value="best">Çok satanlar</option><option value="new">En yeni</option></select><select id="merchFilter" class="select" aria-label="Mağaza filtresi seç" onchange="render()"><option value="">Tüm ürünler</option><option value="discount">İndirimli ürünler</option><option value="new">Yeni gelenler</option><option value="best">Çok satanlar</option></select></div><div class="filterMeta"><span id="resultCount" aria-live="polite"></span><div id="activeFilters"></div><button type="button" class="clearFilters" onclick="clearFilters()">Filtreleri temizle</button></div>
 <div class="products" id="productGrid" aria-live="polite">
-<div class="card" data-search="menzerna sealing wax boya koruma cilası 250 ml" data-cat="koruma"><div class="productVisual"><span class="badge">GERÇEK KATALOG</span>MENZERNA<br>ürün görseli canlı katalogdan<br>final aktarımda yerleştirilecek</div><div class="cardBody"><div class="brand">MENZERNA</div><div class="productTitle">Sealing Wax Boya Koruma Cilası — 250 ml</div><div class="price">500 TL</div><div class="meta">15:00'a kadar aynı gün kargo • Sürat Kargo • Bursa</div><button class="add" onclick="addCart('MENZERNA Sealing Wax',500)">Sepete Ekle</button></div></div>
-<div class="card" data-search="soft99 h7 seramik kaplama 200ml" data-cat="koruma"><div class="productVisual"><span class="badge">KATALOGDA</span>SOFT99 H7<br>Seramik Kaplama 200 ml</div><div class="cardBody"><div class="brand">SOFT99</div><div class="productTitle">H7 Seramik Kaplama — 200 ml</div><div class="price">Fiyat doğrulanacak</div><div class="meta">Canlı katalog ürünü • fiyat final taramada</div><button class="add">Ürünü İncele</button></div></div>
-<div class="card" data-search="gyeon trim plastik koruyucu yenileyici 30ml" data-cat="koruma"><div class="productVisual"><span class="badge">KATALOGDA</span>GYEON TRIM<br>30 ml</div><div class="cardBody"><div class="brand">GYEON</div><div class="productTitle">Trim Plastik Koruyucu & Yenileyici — 30 ml</div><div class="price">Fiyat doğrulanacak</div><div class="meta">Canlı katalog ürünü • fiyat final taramada</div><button class="add">Ürünü İncele</button></div></div>
-<div class="card" data-search="gyeon can coat evo seramik kaplama seti 200 ml" data-cat="koruma"><div class="productVisual"><span class="badge">KATALOGDA</span>GYEON CANCOAT EVO<br>200 ml</div><div class="cardBody"><div class="brand">GYEON</div><div class="productTitle">CanCoat EVO Seramik Kaplama Seti — 200 ml</div><div class="price">Fiyat doğrulanacak</div><div class="meta">Canlı katalog ürünü • fiyat final taramada</div><button class="add">Ürünü İncele</button></div></div>
+<div class="card" data-search="menzerna sealing wax boya koruma cilası 250 ml" data-cat="koruma"><div class="productVisual"><span class="badge">GERÇEK KATALOG</span>MENZERNA<br>ürün görseli canlı katalogdan<br>final aktarımda yerleştirilecek</div><div class="cardBody"><div class="brand">MENZERNA</div><div class="productTitle">Sealing Wax Boya Koruma Cilası — 250 ml</div><div class="price">500 TL</div><div class="meta">15:00'a kadar aynı gün kargo • Sürat Kargo • Bursa</div><button class="add" onclick="addCart(1)">Sepete Ekle</button></div></div>
+<div class="card" data-search="soft99 h7 seramik kaplama 200ml" data-cat="koruma"><div class="productVisual"><span class="badge">KATALOGDA</span>SOFT99 H7<br>Seramik Kaplama 200 ml</div><div class="cardBody"><div class="brand">SOFT99</div><div class="productTitle">H7 Seramik Kaplama — 200 ml</div><div class="price">Fiyat doğrulanacak</div><div class="meta">Canlı katalog ürünü • fiyat final taramada</div><button class="add" type="button" onclick="document.getElementById('urunler').scrollIntoView({behavior:'smooth'})">Sepete Ekle</button></div></div>
+<div class="card" data-search="gyeon trim plastik koruyucu yenileyici 30ml" data-cat="koruma"><div class="productVisual"><span class="badge">KATALOGDA</span>GYEON TRIM<br>30 ml</div><div class="cardBody"><div class="brand">GYEON</div><div class="productTitle">Trim Plastik Koruyucu & Yenileyici — 30 ml</div><div class="price">Fiyat doğrulanacak</div><div class="meta">Canlı katalog ürünü • fiyat final taramada</div><button class="add" type="button" onclick="document.getElementById('urunler').scrollIntoView({behavior:'smooth'})">Sepete Ekle</button></div></div>
+<div class="card" data-search="gyeon can coat evo seramik kaplama seti 200 ml" data-cat="koruma"><div class="productVisual"><span class="badge">KATALOGDA</span>GYEON CANCOAT EVO<br>200 ml</div><div class="cardBody"><div class="brand">GYEON</div><div class="productTitle">CanCoat EVO Seramik Kaplama Seti — 200 ml</div><div class="price">Fiyat doğrulanacak</div><div class="meta">Canlı katalog ürünü • fiyat final taramada</div><button class="add" type="button" onclick="document.getElementById('urunler').scrollIntoView({behavior:'smooth'})">Sepete Ekle</button></div></div>
 </div>
 <p class="demoNote">Not: Yalnızca doğrulanmış fiyat gösterilir. Diğer katalog ürünlerinde müşteri sunumundan önce canlı fiyat/görsel doğrulaması yapılacaktır.</p>
 </div></section>
@@ -291,7 +291,7 @@ header .market a{display:grid!important;flex:0 0 auto}
         <button data-admin-pane="orders"><span>▣</span>Siparişler</button>
         <button data-admin-pane="visibility"><span>◎</span>Mağaza görünürlüğü</button>
         <div class="managerNavGroup">Analiz</div>
-        <button data-admin-pane="analytics"><span>▥</span>İstatistikler</button>
+        <button data-admin-pane="analytics"><span>▥</span>İstatistikler</button><button type="button" id="trafficNavBtn"><span>↗</span>Mağaza Trafiği</button>
         <button data-admin-pane="customers"><span>♟</span>Müşteriler</button>
         <div class="managerNavGroup">Satış yönetimi</div>
         <button data-admin-pane="discounts"><span>%</span>İndirimler <em id="managerDiscountBadge">0</em></button>
@@ -336,6 +336,18 @@ header .market a{display:grid!important;flex:0 0 auto}
       <section class="rolePane" data-admin-content="products">
         <div class="managerHeading"><div><span class="managerEyebrow">KATALOG</span><h2>Ürünler</h2><p>59 ürünlük mevcut kataloğu arayın, fiyat ve kampanya durumunu kontrol edin.</p></div></div>
         <div class="managerCard"><input id="adminTableSearch" class="managerInput" type="search" placeholder="Ürün, marka veya kategori ara…"><div id="adminProductTableWrap" class="managerTableWrap"></div></div>
+        <div class="managerCard" id="productControlCard" style="margin-top:16px">
+          <div class="managerCardHead"><div><span class="managerEyebrow">ÜRÜN KONTROLÜ</span><h3 id="productControlTitle">Bir ürün seçin</h3></div><span class="managerPill">Tarayıcı demosu</span></div>
+          <p class="demoNote">Bu kontroller gerçek backend bağlanana kadar yalnızca bu tarayıcıda saklanır. Doğrulanmamış stok sayısı uydurulmaz.</p>
+          <div class="manageGrid">
+            <div class="manageField"><label>Stok adedi</label><input id="productStockQty" type="number" min="0" step="1" placeholder="Belirtilmedi"></div>
+            <div class="manageField"><label>Stok durumu</label><select id="productStockState"><option value="unknown">Belirtilmedi</option><option value="in">Stok var</option><option value="out">Stok yok</option></select></div>
+            <div class="manageField"><label>Ürün durumu</label><select id="productActiveState"><option value="true">Aktif</option><option value="false">Pasif</option></select></div>
+            <div class="manageField"><label>Mağazada görünürlük</label><select id="productVisibilityState"><option value="true">Görünür</option><option value="false">Gizli</option></select></div>
+          </div>
+          <div class="manageActions"><button class="btn primary" type="button" onclick="saveProductControls()">Ürün ayarlarını kaydet</button><button class="btn secondaryBtn" type="button" onclick="previewManagedProduct()">Ürünü incele</button><button class="btn dangerBtn" type="button" onclick="deactivateManagedProduct()">Ürünü pasif yap</button></div>
+          <div id="productControlStatus" class="statusMsg" aria-live="polite"></div>
+        </div>
       </section>
 
       <section class="rolePane" data-admin-content="messages">
@@ -355,9 +367,10 @@ header .market a{display:grid!important;flex:0 0 auto}
       </section>
 
       <section class="rolePane" data-admin-content="analytics">
-        <div class="managerHeading"><div><span class="managerEyebrow">İSTATİSTİKLER</span><h2>Mağaza istatistikleri</h2><p>Gerçek trafik ve satış analitiği bağlandığında performans burada izlenecek.</p></div><select class="managerSelect" disabled><option>Tüm zamanlar</option></select></div>
-        <div class="managerStats"><div><span>Görüntülenme</span><strong>—</strong><small>Analitik gerekli</small></div><div><span>Ziyaretler</span><strong>—</strong><small>Analitik gerekli</small></div><div><span>Siparişler</span><strong>—</strong><small>Backend gerekli</small></div><div><span>Gelir</span><strong>—</strong><small>Ödeme verisi gerekli</small></div></div>
-        <div class="managerChart"><div class="chartHead"><b>Performans grafiği</b><span>Canlı veri bağlandığında otomatik oluşur</span></div><div class="chartBlank"><span>Gerçek analitik verisi bekleniyor</span></div></div>
+        <div class="managerHeading"><div><span class="managerEyebrow">İSTATİSTİKLER</span><h2>Mağaza istatistikleri</h2><p>Canlı analitik bağlanana kadar bu tarayıcıdaki gerçek demo etkileşimleri gösterilir; satış ve gelir uydurulmaz.</p></div><select class="managerSelect" id="analyticsRange"><option value="today">Bugün</option><option value="yesterday">Dün</option><option value="7">Son 7 gün</option><option value="30">Son 30 gün</option><option value="month">Son 1 ay</option><option value="year">Son 1 yıl</option><option value="all" selected>Tüm zamanlar</option></select></div>
+        <div class="managerFilterBar"><button class="active" type="button" id="analyticsOverviewBtn">Genel bakış</button><button type="button" id="analyticsTrafficBtn">Mağaza Trafiği</button></div>
+        <div class="managerStats"><div><span>Ürün görüntüleme</span><strong id="analyticsViews">0</strong><small>Bu tarayıcı</small></div><div><span>Sepete ekleme</span><strong id="analyticsCartAdds">0</strong><small>Bu tarayıcı</small></div><div><span>Siparişler</span><strong>—</strong><small>Backend gerekli</small></div><div><span>Gelir</span><strong>—</strong><small>Ödeme verisi gerekli</small></div></div>
+        <div class="managerChart"><div class="chartHead"><b id="analyticsChartTitle">Performans özeti</b><span id="analyticsRangeLabel">Tüm zamanlar</span></div><div class="chartBlank" id="analyticsChartBody"><span>Henüz demo etkileşimi yok</span></div></div>
       </section>
 
       <section class="rolePane" data-admin-content="customers">
@@ -516,7 +529,7 @@ products.forEach(product=>{product.slug=slugify(`${product.brand}-${product.name
 function loadList(key){try{const value=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(value)?value.map(Number).filter(id=>Number.isInteger(id)):[]}catch(error){return []}}
 function saveList(key,value){localStorage.setItem(key,JSON.stringify(value))}
 function loadDemoOverride(id){try{const overrides=JSON.parse(localStorage.getItem('detaycimDemoCatalog')||'{}');return overrides[String(id)]||{}}catch(error){return {}}}
-function trackEvent(name,detail={}){document.dispatchEvent(new CustomEvent('detaycim:analytics',{detail:{name,...detail}}))}
+function trackEvent(name,detail={}){try{const events=JSON.parse(localStorage.getItem('detaycimAnalytics')||'[]');events.push({name,detail,at:new Date().toISOString()});localStorage.setItem('detaycimAnalytics',JSON.stringify(events.slice(-5000)))}catch(e){}document.dispatchEvent(new CustomEvent('detaycim:analytics',{detail:{name,...detail}}));if(document.getElementById('adminShell')?.classList.contains('open'))renderAnalytics()}
 function getProduct(id){return products.find(product=>product.id===Number(id))}
 function isFavorite(id){return wishlist.includes(Number(id))}
 function toggleWishlist(id){const product=getProduct(id);if(!product)return;if(isFavorite(id)){wishlist=wishlist.filter(item=>item!==Number(id));trackEvent('wishlist_remove',{item_id:id})}else{wishlist=[Number(id),...wishlist.filter(item=>item!==Number(id))];trackEvent('wishlist_add',{item_id:id})}saveList('detaycimWishlist',wishlist);renderWishlistState();renderShowcase();render()}
@@ -534,7 +547,7 @@ function focusSearch(){document.getElementById('search').focus();document.getEle
 function openCart(){renderCart();document.getElementById('drawer').classList.add('open');document.getElementById('overlay').classList.add('show');document.getElementById('drawer').setAttribute('aria-hidden','false')}
 function closeCart(){document.getElementById('drawer').classList.remove('open');document.getElementById('overlay').classList.remove('show');document.getElementById('drawer').setAttribute('aria-hidden','true')}
 function toggleCart(){document.getElementById('drawer').classList.contains('open')?closeCart():openCart()}
-function addCart(id){if(!getProduct(id))return;cart.push(Number(id));saveCart();renderCart();trackEvent('add_to_cart',{item_id:Number(id)});openCart()}
+function addCart(id){const p=getProduct(id);if(!p||p.active===false||p.visible===false||p.stockState==='out'||Number(p.stockQty)===0)return;cart.push(Number(id));saveCart();renderCart();trackEvent('add_to_cart',{item_id:Number(id)});openCart()}
 function removeCart(index){cart.splice(index,1);saveCart();renderCart();trackEvent('remove_from_cart',{index})}
 function changeCartQuantity(index,delta){const id=cart[index];if(!getProduct(id))return;if(delta>0)cart.splice(index,0,Number(id));else{cart.splice(index,1)}saveCart();renderCart()}
 function clearCart(){cart=[];saveCart();renderCart();trackEvent('clear_cart')}
@@ -553,7 +566,7 @@ function openProductDetail(id,source){
 	document.getElementById('detailCategory').textContent=product.category;
 	document.getElementById('detailMeta').textContent=product.description||'Ürün açıklaması mağaza verileriyle güncellenecektir.';
 	document.getElementById('detailQty').textContent=detailQuantity;
-	document.getElementById('detailStock').textContent=product.stockStatus||'Stok bilgisi mağaza tarafından eklenecek';
+	document.getElementById('detailStock').textContent=product.stockState==='out'||Number(product.stockQty)===0?'Stok yok':product.stockState==='in'?(product.stockQty!==null&&product.stockQty!==undefined&&product.stockQty!==''?`Stok var · ${product.stockQty} adet`:'Stok var'):'Stok bilgisi mağaza tarafından eklenecek';
 	document.getElementById('detailSku').textContent=product.sku||'SKU verisi mağaza tarafından eklenecek';
 	document.getElementById('detailWeight').textContent=product.weightKg?`${product.weightKg} kg`:'Ağırlık verisi mağaza tarafından eklenecek';
 	document.getElementById('detailFavorite').textContent=isFavorite(product.id)?'♥ Favorilerden çıkar':'♡ Favorilere ekle';
@@ -600,8 +613,8 @@ function renderCart(){
 }
 function setCategoryFromFilter(){activeCategory=document.getElementById('categoryFilter').value;render()}
 function productCardMarkup(product){
-	const favorite=isFavorite(product.id);const newBadge=product.addedAt||product.isNewDemo?`<span class="newBadge">${product.isNewDemo?'DEMO YENİ':'YENİ'}</span>`:'';const bestBadge=product.salesCount!==null||product.isBestsellerDemo?`<span class="bestBadge">${product.isBestsellerDemo?'DEMO ÇOK SATAN':'ÇOK SATAN'}</span>`:'';
-	return `<article class="card" tabindex="0" aria-label="${escapeHTML(product.name)} detaylarını gör" data-detail-id="${product.id}" data-product-slug="${escapeHTML(product.slug)}"><button type="button" class="cardFavorite ${favorite?'active':''}" data-favorite-id="${product.id}" aria-label="${favorite?'Favorilerden çıkar':'Favorilere ekle'}">${favorite?'♥':'♡'}</button><div class="productVisual" aria-label="${escapeHTML(product.brand)} ürün görseli placeholder">ÜRÜN GÖRSELİ</div><div class="cardBody">${discountMarkup(product)}${newBadge}${bestBadge}<div class="brand">${escapeHTML(product.brand)}</div><div class="productTitle">${escapeHTML(product.name)}</div><div class="meta">${escapeHTML(product.category)} • Detayları gör</div>${priceMarkup(product)}<button type="button" class="add" data-product-id="${product.id}">Sepete ekle</button></div></article>`;
+	const favorite=isFavorite(product.id);const newBadge=product.addedAt||product.isNewDemo?`<span class="newBadge">${product.isNewDemo?'DEMO YENİ':'YENİ'}</span>`:'';const bestBadge=product.salesCount!==null||product.isBestsellerDemo?`<span class="bestBadge">${product.isBestsellerDemo?'DEMO ÇOK SATAN':'ÇOK SATAN'}</span>`:'';const out=product.stockState==='out'||Number(product.stockQty)===0;const stockText=out?'Stok yok':product.stockState==='in'?(product.stockQty!==null&&product.stockQty!==undefined&&product.stockQty!==''?`Stok: ${product.stockQty}`:'Stok var'):'Stok doğrulanacak';
+	return `<article class="card" tabindex="0" aria-label="${escapeHTML(product.name)} detaylarını gör" data-detail-id="${product.id}" data-product-slug="${escapeHTML(product.slug)}"><button type="button" class="cardFavorite ${favorite?'active':''}" data-favorite-id="${product.id}" aria-label="${favorite?'Favorilerden çıkar':'Favorilere ekle'}">${favorite?'♥':'♡'}</button><div class="productVisual" aria-label="${escapeHTML(product.brand)} ürün görseli placeholder">ÜRÜN GÖRSELİ</div><div class="cardBody">${discountMarkup(product)}${newBadge}${bestBadge}<div class="brand">${escapeHTML(product.brand)}</div><div class="productTitle">${escapeHTML(product.name)}</div><div class="meta">${escapeHTML(product.category)} • ${stockText} • Detayları gör</div>${priceMarkup(product)}<button type="button" class="add" data-product-id="${product.id}" ${out?'disabled aria-disabled="true"':''}>${out?'Stokta yok':'Sepete ekle'}</button></div></article>`;
 }
 function bindProductCards(container){
 	container.querySelectorAll('[data-detail-id]').forEach(card=>{
@@ -679,9 +692,9 @@ function setup(){
 	const proScope=document.getElementById('proAdminScope');if(proScope)proScope.addEventListener('change',updateDiscountScopeUI);
 	const proDiscount=document.getElementById('proAdminDiscount');if(proDiscount)proDiscount.addEventListener('change',updateAdminPricePreview);if(proMulti)proMulti.addEventListener('change',updateAdminPricePreview);
 	const tableSearch=document.getElementById('adminTableSearch');if(tableSearch)tableSearch.addEventListener('input',e=>renderAdminProductTable(e.target.value));
-	renderCart();renderShowcase();render();refreshAdminDashboard();updateDiscountScopeUI();loadProfessionalAdminProduct();
+	renderCart();renderShowcase();render();refreshAdminDashboard();updateDiscountScopeUI();loadProfessionalAdminProduct();setupAnalyticsControls();
 }
-function setupAdminDemo(){const select=document.getElementById('adminProduct');select.innerHTML=products.map(product=>`<option value="${product.id}">${escapeHTML(product.brand)} · ${escapeHTML(product.name)}</option>`).join('');document.getElementById('adminSearch').addEventListener('input',event=>{const value=event.target.value.toLocaleLowerCase('tr');[...select.options].forEach(option=>{option.hidden=value&&!option.textContent.toLocaleLowerCase('tr').includes(value)})});document.getElementById('adminDiscount').addEventListener('change',event=>{if(event.target.value==='100'&&!window.confirm('Bu ürün ücretsiz olacaktır. Devam etmek istediğinizden emin misiniz?'))event.target.value=''})}
+function setupAdminDemo(){const select=document.getElementById('adminProduct');const search=document.getElementById('adminSearch');const discount=document.getElementById('adminDiscount');if(!select||!search||!discount)return;select.innerHTML=products.map(product=>`<option value="${product.id}">${escapeHTML(product.brand)} · ${escapeHTML(product.name)}</option>`).join('');search.addEventListener('input',event=>{const value=event.target.value.toLocaleLowerCase('tr');[...select.options].forEach(option=>{option.hidden=value&&!option.textContent.toLocaleLowerCase('tr').includes(value)})});discount.addEventListener('change',event=>{if(event.target.value==='100'&&!window.confirm('Bu ürün ücretsiz olacaktır. Devam etmek istediğinizden emin misiniz?'))event.target.value=''})}
 function saveAdminDemo(){const id=Number(document.getElementById('adminProduct').value);const discount=document.getElementById('adminDiscount').value;const overrides=JSON.parse(localStorage.getItem('detaycimDemoCatalog')||'{}');const newDemo=document.getElementById('adminNew').checked;overrides[id]={...overrides[id],featured:document.getElementById('adminFeatured').checked,discountActive:Boolean(discount),discountPercent:discount?Number(discount):null,isNewDemo:newDemo,isBestsellerDemo:document.getElementById('adminBest').checked,addedAt:newDemo?new Date().toISOString():null};localStorage.setItem('detaycimDemoCatalog',JSON.stringify(overrides));const product=getProduct(id);Object.assign(product,overrides[id]);document.getElementById('adminStatus').textContent='Demo ayarı localStorage’a kaydedildi; gerçek sunucuya gönderilmedi.';renderShowcase();render();renderCart()}
 document.getElementById('overlay').addEventListener('click',closeCart);
 document.getElementById('detailBackdrop').addEventListener('click',event=>{if(event.target.id==='detailBackdrop')closeProductDetail()});
@@ -755,14 +768,14 @@ function returnToAdminFromCustomer(){
  openAdminPanel();
 }
 
-function openAdminPanel(){const shell=document.getElementById('adminShell');shell.classList.add('open');shell.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';refreshAdminDashboard();loadProfessionalAdminProduct();setupManagerSearch()}
+function openAdminPanel(){const shell=document.getElementById('adminShell');shell.classList.add('open');shell.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';refreshAdminDashboard();loadProfessionalAdminProduct();setupManagerSearch();setupAnalyticsControls()}
 function closeAdminPanel(){document.getElementById('adminShell').classList.remove('open');document.getElementById('adminShell').setAttribute('aria-hidden','true');document.body.style.overflow=''}
 function openCustomerPanel(){const shell=document.getElementById('customerShell');shell.classList.add('open');shell.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderCustomerFavorites()}
 function closeCustomerPanel(){document.getElementById('customerShell').classList.remove('open');document.getElementById('customerShell').setAttribute('aria-hidden','true');document.body.style.overflow=''}
 function switchRolePane(kind,name){
  const shell=document.getElementById(kind==='admin'?'adminShell':'customerShell');
  shell.querySelectorAll(`[data-${kind}-pane]`).forEach(btn=>btn.classList.toggle('active',btn.dataset[`${kind}Pane`]===name));
- shell.querySelectorAll(`[data-${kind}-content]`).forEach(pane=>pane.classList.toggle('active',pane.dataset[`${kind}Content`]===name));
+ shell.querySelectorAll(`[data-${kind}-content]`).forEach(pane=>pane.classList.toggle('active',pane.dataset[`${kind}Content`]===name));if(kind==='admin'&&name==='analytics')renderAnalytics(document.getElementById('analyticsTrafficBtn')?.classList.contains('active')?'traffic':'overview');
 }
 document.querySelectorAll('[data-admin-pane]').forEach(btn=>btn.addEventListener('click',()=>switchRolePane('admin',btn.dataset.adminPane)));
 document.querySelectorAll('[data-customer-pane]').forEach(btn=>btn.addEventListener('click',()=>{switchRolePane('customer',btn.dataset.customerPane);if(btn.dataset.customerPane==='favorites')renderCustomerFavorites()}));
@@ -782,9 +795,40 @@ function renderAdminProductTable(q=''){
  const wrap=document.getElementById('adminProductTableWrap');if(!wrap)return;
  const query=q.toLocaleLowerCase('tr').trim();
  const rows=products.filter(p=>!query||(p.brand+' '+p.name+' '+p.category).toLocaleLowerCase('tr').includes(query));
- wrap.innerHTML=`<table class="adminTable"><thead><tr><th>Ürün</th><th>Kategori</th><th>Normal</th><th>Güncel</th><th>İndirim</th><th></th></tr></thead><tbody>${rows.map(p=>`<tr><td><b>${escapeHTML(p.brand)}</b><br>${escapeHTML(p.name)}</td><td>${escapeHTML(p.category)}</td><td>${money(p.price)}</td><td>${money(effectivePrice(p))}</td><td>${activeDiscount(p)?'%'+activeDiscount(p).percent:'—'}</td><td><button type="button" data-admin-edit="${p.id}">Yönet</button></td></tr>`).join('')}</tbody></table>`;
- wrap.querySelectorAll('[data-admin-edit]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('proAdminProduct').value=b.dataset.adminEdit;loadProfessionalAdminProduct();switchRolePane('admin','discounts')}));
+ wrap.innerHTML=`<table class="adminTable"><thead><tr><th>Ürün</th><th>Stok</th><th>Durum</th><th>Görünürlük</th><th>Güncel fiyat</th><th></th></tr></thead><tbody>${rows.map(p=>`<tr><td><b>${escapeHTML(p.brand)}</b><br>${escapeHTML(p.name)}</td><td>${p.stockState==='out'||Number(p.stockQty)===0?'Stok yok':p.stockState==='in'?(p.stockQty!==null&&p.stockQty!==undefined&&p.stockQty!==''?escapeHTML(p.stockQty)+' adet':'Stok var'):'—'}</td><td>${p.active===false?'Pasif':'Aktif'}</td><td>${p.visible===false?'Gizli':'Görünür'}</td><td>${money(effectivePrice(p))}</td><td><button type="button" data-admin-edit="${p.id}">Yönet</button></td></tr>`).join('')}</tbody></table>`;
+ wrap.querySelectorAll('[data-admin-edit]').forEach(b=>b.addEventListener('click',()=>loadProductControls(Number(b.dataset.adminEdit))));
 }
+let managedProductId=null;
+function loadProductControls(id){
+ const p=getProduct(id);if(!p)return;managedProductId=p.id;
+ document.getElementById('productControlTitle').textContent=`${p.brand} · ${p.name}`;
+ document.getElementById('productStockQty').value=p.stockQty??'';
+ document.getElementById('productStockState').value=p.stockState||'unknown';
+ document.getElementById('productActiveState').value=String(p.active!==false);
+ document.getElementById('productVisibilityState').value=String(p.visible!==false);
+ document.getElementById('productControlStatus').textContent='Ürün seçildi. Değişiklikler kaydedilene kadar uygulanmaz.';
+ document.getElementById('productControlCard').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function saveProductControls(){
+ if(!managedProductId){document.getElementById('productControlStatus').textContent='Önce tablodan bir ürün seçin.';return}
+ const raw=document.getElementById('productStockQty').value;const qty=raw===''?null:Math.max(0,Math.floor(Number(raw)));
+ const stockState=document.getElementById('productStockState').value;
+ const patch={stockQty:Number.isFinite(qty)?qty:null,stockState,active:document.getElementById('productActiveState').value==='true',visible:document.getElementById('productVisibilityState').value==='true'};
+ if(patch.stockQty===0)patch.stockState='out';if(patch.stockQty>0&&patch.stockState==='unknown')patch.stockState='in';
+ persistOverride(managedProductId,patch);document.getElementById('productControlStatus').textContent='Ürün ayarları bu tarayıcıdaki demo kataloğa kaydedildi.';refreshCommerce();loadProductControls(managedProductId);
+}
+function deactivateManagedProduct(){if(!managedProductId){document.getElementById('productControlStatus').textContent='Önce bir ürün seçin.';return}document.getElementById('productActiveState').value='false';saveProductControls()}
+function previewManagedProduct(){if(!managedProductId){document.getElementById('productControlStatus').textContent='Önce bir ürün seçin.';return}const p=getProduct(managedProductId);closeAdminPanel();setTimeout(()=>openProductDetail(p.id),80)}
+function analyticsEvents(){try{const v=JSON.parse(localStorage.getItem('detaycimAnalytics')||'[]');return Array.isArray(v)?v:[]}catch(e){return []}}
+function analyticsStart(range){const now=new Date(),d=new Date(now);if(range==='today'){d.setHours(0,0,0,0);return d}if(range==='yesterday'){d.setDate(d.getDate()-1);d.setHours(0,0,0,0);return d}if(range==='7'){d.setDate(d.getDate()-7);return d}if(range==='30'||range==='month'){d.setDate(d.getDate()-30);return d}if(range==='year'){d.setFullYear(d.getFullYear()-1);return d}return null}
+function filteredAnalyticsEvents(){const range=document.getElementById('analyticsRange')?.value||'all',start=analyticsStart(range),now=new Date();return analyticsEvents().filter(e=>{const t=new Date(e.at);if(Number.isNaN(t.getTime()))return false;if(range==='yesterday'){const end=new Date(start);end.setDate(end.getDate()+1);return t>=start&&t<end}return !start||t>=start&&t<=now})}
+function renderAnalytics(mode='overview'){
+ const sel=document.getElementById('analyticsRange');if(!sel)return;const events=filteredAnalyticsEvents();const views=events.filter(e=>e.name==='view_item').length,adds=events.filter(e=>e.name==='add_to_cart').length;
+ document.getElementById('analyticsViews').textContent=views;document.getElementById('analyticsCartAdds').textContent=adds;document.getElementById('analyticsRangeLabel').textContent=sel.options[sel.selectedIndex].text;
+ const body=document.getElementById('analyticsChartBody'),title=document.getElementById('analyticsChartTitle');
+ if(mode==='traffic'){title.textContent='Mağaza Trafiği';const fav=events.filter(e=>e.name==='wishlist_add').length;body.innerHTML=`<span>Ürün detay görüntüleme: <b>${views}</b> · Sepete ekleme: <b>${adds}</b> · Favoriye ekleme: <b>${fav}</b><br><small>Bu değerler yalnızca bu tarayıcıdaki demo etkileşimleridir; gerçek ziyaretçi analitiği değildir.</small></span>`}else{title.textContent='Performans özeti';body.innerHTML=events.length?`<span>Seçili dönemde <b>${events.length}</b> demo etkileşimi kaydedildi.</span>`:'<span>Seçili dönemde demo etkileşimi yok.</span>'}
+}
+function setupAnalyticsControls(){const sel=document.getElementById('analyticsRange'),over=document.getElementById('analyticsOverviewBtn'),traffic=document.getElementById('analyticsTrafficBtn'),nav=document.getElementById('trafficNavBtn');if(sel&&!sel.dataset.ready){sel.dataset.ready='1';sel.addEventListener('change',()=>renderAnalytics(over?.classList.contains('active')?'overview':'traffic'))}if(over&&!over.dataset.ready){over.dataset.ready='1';over.addEventListener('click',()=>{over.classList.add('active');traffic.classList.remove('active');renderAnalytics('overview')})}if(traffic&&!traffic.dataset.ready){traffic.dataset.ready='1';traffic.addEventListener('click',()=>{traffic.classList.add('active');over.classList.remove('active');renderAnalytics('traffic')})}if(nav&&!nav.dataset.ready){nav.dataset.ready='1';nav.addEventListener('click',()=>{switchRolePane('admin','analytics');traffic?.click()})}renderAnalytics('overview')}
 function loadProfessionalAdminProduct(){
  const select=document.getElementById('proAdminProduct');if(!select)return;
  const p=getProduct(Number(select.value||products[0].id));if(!p)return;
