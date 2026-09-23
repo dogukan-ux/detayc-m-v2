@@ -222,6 +222,9 @@ header .market a{display:grid!important;flex:0 0 auto}
 @media(max-width:700px){.top .contactTop{display:flex;flex-direction:column;gap:6px}.contactLinks{width:100%;justify-content:center}.currencyWrap{width:100%;justify-content:center;margin:0}.currencyWrap label{display:inline}.currencyWrap #currencyStatus{display:block;font-size:8px;text-align:center}.navActions{gap:6px}.navActions .iconBtn,.navActions .adminEntry{font-size:10px;padding:9px}.logoCom{font-size:.42em}.contactMap{height:200px}}
 
 .cartTabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 18px}.cartTab{border:1px solid var(--line);background:#f5f6f7;border-radius:12px;padding:11px 10px;font-weight:900;cursor:pointer}.cartTab.active{background:#111318;color:#fff;border-color:#111318}.drawerFavorites{display:grid;gap:10px}.drawerFavoriteItem{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px}.drawerFavoriteItem b{display:block;font-size:12px}.drawerFavoriteItem small{display:block;color:var(--muted);margin-top:4px}.drawerFavoriteActions{display:flex;gap:6px}.drawerFavoriteActions button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px;font-weight:800;cursor:pointer}.drawerFavoriteActions .favAdd{background:#111318;color:#fff}.drawerFavoriteEmpty{padding:22px;border:1px dashed #cbd0d5;border-radius:12px;color:var(--muted);text-align:center}
+
+/* Final header cleanup: standalone favorite control removed; favorites live inside cart drawer. */
+header .wishlistBtn, header [data-action="wishlist"], header [aria-label*="Favori"], .top .wishlistBtn {display:none!important;}
 </style>
 </head>
 <body data-role="admin">
