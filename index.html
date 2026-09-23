@@ -209,6 +209,11 @@ header .market a{display:grid!important;flex:0 0 auto}
 @media(max-width:430px){.managerStats{grid-template-columns:1fr}.managerHeading h2{font-size:25px}.managerContent{padding-left:11px;padding-right:11px}}
 
 header .wishlistBtn{display:none!important}
+
+/* v3.1 — üst menüdeki eski favori/kalp düğmesini kesin olarak kaldır */
+header .wishlistBtn, .top .wishlistBtn, .navActions .wishlistBtn,
+header [aria-label="Favoriler"], .top [aria-label="Favoriler"],
+header [title="Favoriler"], .top [title="Favoriler"]{display:none!important;width:0!important;height:0!important;padding:0!important;margin:0!important;border:0!important;overflow:hidden!important;position:absolute!important;pointer-events:none!important;}
 </style>
 </head>
 <body data-role="admin">
@@ -845,5 +850,21 @@ function renderCustomerFavorites(){
 
 setup();
 const requestedProduct=new URLSearchParams(location.search).get('product');if(requestedProduct){const product=products.find(item=>item.slug===requestedProduct);if(product)openProductDetail(product.id)}
+</script>
+
+<script>
+/* v3.1 cache/legacy guard: sadece üst site menüsündeki kalp/favori kabını tamamen siler.
+   Ürün kartı ve ürün detayındaki favoriler korunur. */
+(function removeLegacyHeaderFavorite(){
+  function clean(){
+    document.querySelectorAll('header .wishlistBtn,.top .wishlistBtn,.navActions .wishlistBtn,header [aria-label="Favoriler"],.top [aria-label="Favoriler"],header [title="Favoriler"],.top [title="Favoriler"]').forEach(function(el){el.remove();});
+    document.querySelectorAll('header button,.top button,header a,.top a').forEach(function(el){
+      var t=(el.textContent||'').replace(/\s+/g,'').trim();
+      if(t==='♡'||t==='♥'||t==='❤'||t==='🤍') el.remove();
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',clean); else clean();
+  window.addEventListener('load',clean);
+})();
 </script>
 </body></html>
